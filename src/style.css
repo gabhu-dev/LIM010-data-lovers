@@ -1,4 +1,59 @@
-h1{
-    font-size: 90px;
-    color: aqua;
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.pantalla {
+    height: 1024px;
+    width: 1440px;
+    background-size: cover;
+    background-image: url(https://lolstatic-a.akamaihd.net/frontpage/apps/prod/playnow-global/es_AR/fc1312b6f05f6bbf465d387efbc5860767f01f30/assets/img/hero-vid.jpg);
+}
+
+.sesion {
+    position: absolute;
+    width: 684px;
+    height: 693px;
+    left: 378px;
+    top: 144px;
+    border: 3px solid yellow;
+}
+
+.comun {
+    position: absolute;
+    width: 449px;
+    height: 268px;
+    left: 496px;
+    top: 338px;
+    border: 3px solid orange;
+}
+
+.cuadroDeTexto {
+    width: 449px;
+    height: 50px;
+    margin-top: 5px;
+}
+
+.caja-de-ingreso {
+    position: absolute;
+    width: 448px;
+    height: 98px;
+    left: 496px;
+    top: 654px;
+}
+
+.buttonPass {
+    width: 180px;
+    height: 52px;
+    margin-left: 134px;
+}
+
+.menu ul {
+    width: 100%;
+    background-color: yellow;
+    display: flex;
 }
