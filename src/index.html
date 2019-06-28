@@ -3,45 +3,41 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>LOLWIIKI</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <header>hola</header>
+    <header class="header-1 hide">HOLS</header>
     <main>
-        <div id="pantalla-1" class="pantalla">
-            <div id="sesion" class="sesion"></div>
-            <div id="comun" class="comun">
-                <h1>usuario</h1>
-                <input type="text" id="usuario" class="cuadroDeTexto">
-                <h2 id="contraseña" class="contraseña">contraseña</h2>
-                <input type="password" id="password" class="cuadroDeTexto">
-            </div>
-            <div class="caja-de-ingreso">
-                <button type="button" id="empezar" class="buttonPass">ingresa</button>
-            </div>
+        <section id="pantalla-login" class="pantalla-login">
 
-
-
-        </div>
+            <form id="cajaLogin" class="caja-login">
+                <header class="logo"></header>
+                <h1>Bienvenidos</h1>
+                <h2>Usuario</h2>
+                <input type="text" id="usuario" class="cuadro-de-texto">
+                <h2 id="contraseña" class="contraseña">Contraseña</h2>
+                <input type="password" id="password" class="cuadro-de-texto">
+                <button type="button" id="ingresar" class="buttonPass">INGRESA</button>
+            </form>
+        </section>
         <div id="pantalla-2" class="pantalla hide">
-            <header>hola2</header>
+            <header class="LOL"></header>
             <nav class="menu">
                 <ul>
-                    <li><a href="">inicio</a></li>
-                    <li><a href="">ton10</a></li>
-                    <li><a href="">orden</a></li>
-                    <li><a href="">otro</a></li>
+                    <button type="button">Inicio</button>
+                    <button type="button">TOP 10</button>
+                    <button type="button">Campeones</button>
+                    <button type="button">Estadisticas</button>
                 </ul>
             </nav>
-            <section></section>
+
         </div>
     </main>
     <footer></footer>
     <!-- <script src="./data/lol/lol.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
+
     <script src="data.js"></script>
     <script src="main.js"></script>
 </body>
