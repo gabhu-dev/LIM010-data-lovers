@@ -7,14 +7,36 @@
     display: none;
 }
 
-.pantalla-login {
+
+/*pantalla global*/
+
+.pantalla {
     height: 100vh;
-    background-image: url(Lol.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+
+/*pantallas*/
+
+.login {
+    background-image: url(Lol.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.bienvenida {
+    background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d3/97/fa/d397faf0fec8ddd29c45bf847cbb7c41.gif);
+}
+
+.cuadro-login {
+    width: 460px;
+    height: 516px;
+    background-color: #00000059;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .logo {
@@ -25,12 +47,10 @@
 }
 
 .caja-login {
-    width: 460px;
-    height: 516px;
-    background-color: #00000059;
+    width: 335px;
+    height: 210px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .cuadro-de-texto {
@@ -41,10 +61,16 @@
     outline: none;
 }
 
-.buttonPass {
-    margin-top: 80px;
+.cuadro-boton {
+    height: 84px;
     width: 335px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.buttonPass {
     height: 50px;
+    width: 335px;
     outline: none;
     border: none;
     border-radius: 10px;
@@ -64,17 +90,9 @@ h2 {
     margin-top: 14px;
 }
 
-#pantalla-bienvenida {
-    height: 100vh;
-    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/951832693539555984/1159D193983BB0B8E4719847F3B8DFD49B33674C/);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .logoLol {
-    width:100%;
+    width: 100%;
     height: 200px;
-    position:center;
     background-color: black;
     background-image: url(header.gif);
     background-repeat: no-repeat;
