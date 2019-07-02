@@ -3,43 +3,46 @@
 
 <head>
     <meta charset="utf-8">
-    <title>LOLWIIKI</title>
+    <title>League of Legends</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <header></header>
-    <main>
-        <div id="pantalla-login" class="pantalla login">
-            <section class="cuadro-login">
+    <section id="pantalla-login">
+        <div class="vista-login flex">
+            <div class="cuadro-login flex">
                 <header class="logo"></header>
-                <h1>Bienvenidos</h1>
-                <form id="cajaLogin" class="caja-login">
+                <form id="cajaLogin" class="caja-login flex">
                     <h2>Usuario</h2>
                     <input type="text" id="usuario" class="cuadro-de-texto">
                     <h2 class="etiqueta-contrasena">Contraseña</h2>
                     <input type="password" id="password" class="cuadro-de-texto">
+                    <p id="mensajeError"></p>
                 </form>
-                <div class="cuadro-boton">
+                <div class="cuadro-boton flex">
                     <button type="button" id="ingresar" class="buttonPass">INGRESA</button>
                 </div>
-            </section>
+            </div>
         </div>
+    </section>
+    <main>
+
         <div id="pantalla-bienvenida" class="pantalla bienvenida hide">
             <header class="logoLol"></header>
-            <nav class="menu">
-                <ul>
-                    <button type="button">Inicio</button>
-                    <button type="button">TOP 10</button>
-                    <button type="button">Campeones</button>
-                    <button type="button">Estadisticas</button>
-                </ul>
-            </nav>
+            <section id="vista-dos" class="pantalla vista-dos ">
+                <nav class="menu">
+                    <ul>
+                        <li href="" type="button">Inicio</li>
+                        <button href="" type="button" id="campeones">Campeones</button>
+                        <button href="" type="button" id="estadistica">Estadisticas</button>
+                    </ul>
+                </nav>
+            </section>
         </div>
     </main>
     <footer></footer>
     <script src="./data/lol/lol.js"></script>
-
     <script src="data.js"></script>
     <script src="main.js"></script>
 </body>
