@@ -1,6 +1,6 @@
 # Data Lovers
 
-## Índice
+## League Of Legends
 
 - [Índice](#índice)
 - [Preámbulo](#preámbulo)

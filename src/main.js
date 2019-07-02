@@ -3,6 +3,7 @@ const contrasena =document.getElementById('password');
 const usuario= document.getElementById('usuario');
 //BOTONES
 const empezar = document.getElementById('ingresar');
+//const campeones= document.getElementById('campeones');
 //VISTAS
 const vistaLogin=document.getElementById('pantalla-login');
 const vistaBienvenida=document.getElementById('pantalla-bienvenida');
@@ -17,8 +18,13 @@ empezar.addEventListener('click', ()=>{
          vistaLogin.classList.add('hide');
          vistaBienvenida.classList.remove('hide');
      }else{
-         alert('Datos incorrectos,intente otra vez');
-         password++;
-     }        
+        document.getElementById('mensajeError').innerHTML='*Datos Incorrectos*';
+        password++;
+    }    
     }
 });
+
+//campeones.getElementById('campeones', ()=>{
+   
+    
+//})

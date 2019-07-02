@@ -1,45 +1,60 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8">
-        <title>LOLWIIKI</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
+  <head>
+    <meta charset="utf-8">
+    <title>League of Legends</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
 
   <body>
-  <header></header>
-  <main>
-  <section id="pantalla-login" class="pantalla-login">
-    <div class="caja-login">
-    <form id="cajaLogin" class="caja-login">
-    <header class="logo"></header>
-    <h1>Bienvenidos</h1>
-   <h2>Usuario</h2>
-   <input type="text" id="usuario" class="cuadro-de-texto">
-   <h2  class="etiqueta-contrasena">Contraseña</h2>
-   <input type="password" id="password" class="cuadro-de-texto">
-   <button type="button" id="ingresar" class="buttonPass">INGRESA</button>
-   </form>
-   </div>
-</section>
-<section id="pantalla-bienvenida" class="pantalla hide">
- <header class="logoLol"></header>
- <nav class="menu">
- <ul>
- <button type="button">Inicio</button>
- <button type="button">TOP 10</button>
- <button type="button">Campeones</button>
- <button type="button">Estadisticas</button>
- </ul>
- </nav>
- </section>
-</main>
-<footer></footer>
-        <!-- <script src="./data/lol/lol.js"></script> -->
+    <header></header>
+    <section id="pantalla-login" class="pantalla login">
+      <div class="vista-login flex">
+        <div class="cuadro-login flex">
+          <header class="logo"></header>
+          <form id="cajaLogin" class="caja-login flex">
+            <h2>Usuario</h2>
+            <input type="text" id="usuario" class="cuadro-de-texto">
+            <h2 class="etiqueta-contrasena">Contraseña</h2>
+            <input type="password" id="password" class="cuadro-de-texto">
+            <p id="mensajeError"></p>
+          </form>
+          <div class="cuadro-boton flex">
+            <button type="button" id="ingresar" class="buttonPass">INGRESA</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
 
-<script src="data.js"></script>
-<script src="main.js"></script>
-</body>
+      <div id="pantalla-bienvenida" class="pantalla bienvenida hide">
+        <header class="logoLol"></header>
+        <section id="vista-dos" class="pantalla vista-dos ">
+          <nav>
+            <ul class="menu flex">
+              <button type="button" class="btn-opciones" id="inicio">INICIO</button>
+              <button type="button" class="btn-opciones" id="campeones">CAMPEONES</button>
+              <button type="button" class="btn-opciones" id="estadistica">ESTADISTICA</button>
+            </ul>
+          </nav>
+          <div class="caja-informacion flex">
+            <h2>Información sobre el juego</h2>
+            <p> League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la
+              intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos
+              campeones, cada uno con un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos
+              campos de batalla y modos de juego. Con un plantel de campeones en constante expansión, actualizaciones
+              frecuentes y un emocionante panorama competitivo, League of Legends ofrece posibilidades de juego
+              ilimitadas a usuarios de todos los niveles de habilidad.</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./data/lol/lol.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
 
 </html>
