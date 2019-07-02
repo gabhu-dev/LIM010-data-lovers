@@ -9,7 +9,14 @@
   </head>
 
   <body>
-    <header></header>
+    <header class="logoLol hide" id="cabecera"></header>
+    <nav class="hide" id="barra">
+      <ul class="menu flex">
+        <li><a href="main.js" class="btn-opciones">INICIO</a></li>
+        <button type="button" class="btn-opciones" id="campeones">CAMPEONES</button>
+        <li><a href="main.js" class="btn-opciones">ESTADISTICA</a></li>
+     </ul>
+    </nav>
     <section id="pantalla-login" class="pantalla login">
       <div class="vista-login flex">
         <div class="cuadro-login flex">
@@ -30,15 +37,7 @@
     <main>
 
       <div id="pantalla-bienvenida" class="pantalla bienvenida hide">
-        <header class="logoLol"></header>
-        <section id="vista-dos" class="pantalla vista-dos ">
-          <nav>
-            <ul class="menu flex">
-              <button type="button" class="btn-opciones" id="inicio">INICIO</button>
-              <button type="button" class="btn-opciones" id="campeones">CAMPEONES</button>
-              <button type="button" class="btn-opciones" id="estadistica">ESTADISTICA</button>
-            </ul>
-          </nav>
+        <section id="vista-dos" class="pantalla vista-dos flex">
           <div class="caja-informacion flex">
             <h2>Información sobre el juego</h2>
             <p> League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la
@@ -50,6 +49,22 @@
           </div>
         </section>
       </div>
+   <!--<div id="pantallaCampeones" class="pantalla-campeones hide">
+     <section id="vista3" class="campeones">
+
+     </section>
+     <aside>
+       <select name="navegador" id="navegador">
+
+       </select>
+     </aside>
+   </div>-->
+
+
+
+
+
+
     </main>
     <footer></footer>
     <script src="./data/lol/lol.js"></script>

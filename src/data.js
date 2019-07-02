@@ -3,10 +3,15 @@
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
 
-const campeones = () => {
-  let personajes = ['a,b,c,d'];
-  let personajes1 = personajes [i]
-  return campeones;
+const organizarData = (personajes,data) => {
+  const arrayPrueba = Object.values(data);
+  for (let i =0 ; i < arrayPrueba.length; i++){
+    if(personajes.hasOwnProperty(arrayPrueba[i].id)){
+      arrayPrueba[i].splash = obj[arrayPrueba.id];
+      console.log(arrayPrueba[i]);
+    }
+  }
+  //return campeones;
 };
 
-window.example = example;
+//window.example = example;

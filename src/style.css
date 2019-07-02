@@ -30,6 +30,8 @@
 }
 
 .vista-dos {
+   align-items: center;
+   justify-content: center;
     background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d3/97/fa/d397faf0fec8ddd29c45bf847cbb7c41.gif);
 }
 
@@ -88,9 +90,14 @@
     
 }
 .caja-informacion{
-    margin: 5%;
-    border: 1% yellow;
     flex-direction: column;
+    background-color: #020e0e6b;
+    color: #3695ba;
+    width: 750px;
+    height: 155px;
+    padding: 20px;
+    font-size: 18px;
+   
 }
 
 h2, #mensajeError {
@@ -113,10 +120,14 @@ h2, #mensajeError {
     width: 100%;
     height: 50px;
     background-color: black;
-    border: 1px solid #E3B656;
+    border-top: 1px solid #E3B656;
+    border-bottom: 1px solid #E3B656;
     justify-content: space-around;
+    align-content: center;
 }
-
+nav> ul li a{
+    text-decoration: none;
+}
 @media(max-width:375px){
     .login, .vista-login ,.cuadro-login{
 height:667px ;

@@ -7,6 +7,9 @@ const empezar = document.getElementById('ingresar');
 //VISTAS
 const vistaLogin=document.getElementById('pantalla-login');
 const vistaBienvenida=document.getElementById('pantalla-bienvenida');
+const cabecera =document.getElementById('cabecera');
+const barraNavegacion =document.getElementById('barra')
+//const vistaCampeones = document.getElementById('pantallaCampeones')
 //Contador de intentos en login
 let password = 0;
 //Funciones
@@ -14,17 +17,20 @@ empezar.addEventListener('click', ()=>{
     const datos = contrasena.value;
     const datosUsuario = usuario.value;
     if (password < 2) {
-     if(datos==='LABORATORIA' && datosUsuario==='LABORATORIA'){
+     if(datos==='' && datosUsuario===''){
          vistaLogin.classList.add('hide');
          vistaBienvenida.classList.remove('hide');
+         cabecera.classList.remove('hide');
+         barraNavegacion.classList.remove('hide')
+
      }else{
         document.getElementById('mensajeError').innerHTML='*Datos Incorrectos*';
         password++;
     }    
     }
 });
-
-//campeones.getElementById('campeones', ()=>{
-   
+ fetch
+//campeones.addEventListener('click', ()=>{
+  // alert('HOla');
     
-//})
+//});
