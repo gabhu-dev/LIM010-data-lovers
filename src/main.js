@@ -30,7 +30,3 @@ empezar.addEventListener('click', ()=>{
     }
 });
  fetch
-//campeones.addEventListener('click', ()=>{
-  // alert('HOla');
-    
-//});
