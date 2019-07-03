@@ -3,13 +3,14 @@ const contrasena =document.getElementById('password');
 const usuario= document.getElementById('usuario');
 //BOTONES
 const empezar = document.getElementById('ingresar');
-//const campeones= document.getElementById('campeones');
+const campeones= document.getElementById('campeones');
 //VISTAS
 const vistaLogin=document.getElementById('pantalla-login');
 const vistaBienvenida=document.getElementById('pantalla-bienvenida');
 const cabecera =document.getElementById('cabecera');
 const barraNavegacion =document.getElementById('barra')
-//const vistaCampeones = document.getElementById('pantallaCampeones')
+
+const vistaCampeones = document.getElementById('pantallaCampeones')
 //Contador de intentos en login
 let password = 0;
 //Funciones
@@ -29,8 +30,18 @@ empezar.addEventListener('click', ()=>{
     }    
     }
 });
- fetch
-//campeones.addEventListener('click', ()=>{
-  // alert('HOla');
-    
-//});
+campeones.addEventListener('click', ()=>{
+    vistaBienvenida.classList.add('hide')
+    vistaCampeones.classList.remove('hide')
+    /*onst showAll = (LOL) =>{
+        let show = '';
+        for (let i =0; i< LOL.length ; i++);
+        {
+            let probando= `
+
+            `
+        }
+    }*/
+    document.getElementById('prueba').innerHTML= window.data;
+})
+
