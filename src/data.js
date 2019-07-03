@@ -12,6 +12,6 @@ const recorrer = (LOL) => {
 
 window.data= data;
 
-
+;;;
 
 //window.example = example;
