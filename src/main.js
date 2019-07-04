@@ -3,15 +3,19 @@ const contrasena =document.getElementById('password');
 const usuario= document.getElementById('usuario');
 //BOTONES
 const empezar = document.getElementById('ingresar');
-//const campeones= document.getElementById('campeones');
+const campeones= document.getElementById('campeones');
 //VISTAS
 const vistaLogin=document.getElementById('pantalla-login');
 const vistaBienvenida=document.getElementById('pantalla-bienvenida');
+const vistaCampeones = document.getElementById('pantallaCampeones');
+//CONTROLANDO HEADER
 const cabecera =document.getElementById('cabecera');
 const barraNavegacion =document.getElementById('barra')
 //const vistaCampeones = document.getElementById('pantallaCampeones')
 //Contador de intentos en login
 let password = 0;
+let arrayLOL = Object.values(LOL.data);
+
 //Funciones
 empezar.addEventListener('click', ()=>{
     const datos = contrasena.value;
@@ -29,4 +33,21 @@ empezar.addEventListener('click', ()=>{
     }    
     }
 });
- fetch
+ campeones.addEventListener('click', ()=>{
+    let array = '';
+    array = mostrarCampeones(arrayLOL);
+    document.getElementById('name').innerHTML = array;
+    vistaBienvenida.classList.add('hide');
+    vistaCampeones.classList.remove('hide');
+
+ });
+
+ tagk.addEventListener('change',()=>{
+const agarrre=document.getElementById('tagk').value;
+let vacio='';
+let array1=[];
+array1=mostrarAsesinos(arrayLOL,agarrre);
+vacio = mostrarCampeones(array1);
+document.getElementById('name').innerHTML = vacio;
+
+ });

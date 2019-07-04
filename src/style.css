@@ -73,6 +73,10 @@
     align-items: flex-end;
     flex-direction: column;
 }
+.flex-campeones{
+display: flex;    
+    flex-direction: row-reverse;
+}
 
 .buttonPass {
     height: 45px;
@@ -127,6 +131,28 @@ h2, #mensajeError {
 }
 nav> ul li a{
     text-decoration: none;
+}
+.campeones-flex{
+    width: 80%;
+ 
+}
+.personajes-flex{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 5px;
+    vertical-align: top;
+    border: 1px solid yellow;
+}
+.padre{
+    text-align: center;
+}
+.aside{
+    width: 20%;
+    height: 500px;
+    display:inline-block;
+    background: #3695ba;
 }
 @media(max-width:375px){
     .login, .vista-login ,.cuadro-login{
