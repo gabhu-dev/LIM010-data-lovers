@@ -5,11 +5,19 @@
     <meta charset="utf-8">
     <title>League of Legends</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <header></header>
-    <section id="pantalla-login">
+    <header class="logoLol hide" id="cabecera"></header>
+    <nav class="hide" id="barra">
+        <ul class="menu flex">
+            <li><a href="main.js" class="btn-opciones">INICIO</a></li>
+            <button type="button" class="btn-opciones" id="campeones">CAMPEONES</button>
+            <li><a href="main.js" class="btn-opciones">ESTADISTICA</a></li>
+        </ul>
+    </nav>
+    <section id="pantalla-login" class="pantalla login">
         <div class="vista-login flex">
             <div class="cuadro-login flex">
                 <header class="logo"></header>
@@ -29,16 +37,46 @@
     <main>
 
         <div id="pantalla-bienvenida" class="pantalla bienvenida hide">
-            <header class="logoLol"></header>
-            <section id="vista-dos" class="pantalla vista-dos ">
-                <nav class="menu">
-                    <ul>
-                        <li href="" type="button">Inicio</li>
-                        <button href="" type="button" id="campeones">Campeones</button>
-                        <button href="" type="button" id="estadistica">Estadisticas</button>
-                    </ul>
-                </nav>
+            <section id="vista-dos" class="pantalla vista-dos flex">
+                <div class="caja-informacion flex">
+                    <h2>Información sobre el juego</h2>
+                    <p> League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con
+                        un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego. Con un plantel de campeones en constante expansión, actualizaciones frecuentes y un emocionante panorama competitivo,
+                        League of Legends ofrece posibilidades de juego ilimitadas a usuarios de todos los niveles de habilidad.</p>
+                </div>
             </section>
+        </div>
+
+
+        <div id="pantallaCampeones" class="pantalla-campeones hide ">
+            <div class="flex-campeones">
+                <section id="vista3" class="campeones-flex">
+                    <p id="name" class="padre"></p>
+                </section>
+                <aside class="aside">
+
+
+                    <select id="tagk" class="filtrarTipo">
+            <option value disabled selected>TIPO</option>
+            <option value="Assassin">Assassin</option>
+            <option value="Fighter">Fighter</option>
+            <option value="Mage">Mage</option>
+            <option value="Marksman">Marksman</option>
+            <option value="Support">Support</option>
+            <option value="Tank">Tank</option>
+          </select>
+                    <select class="poder" id="ad">
+            <option value disabled selected>ATAQUE</option>         
+            <option value="0">Asc</option>
+            <option value="1">Desc</option>
+          </select>
+                    <select class="orden">
+          <option value disabled selected>ORDEN</option>
+          <option value="a-z">A-Z</option>
+          <option value="z-a">Z-A</option>
+       </select>
+                </aside>
+            </div>
         </div>
     </main>
     <footer></footer>
