@@ -1,65 +1,62 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
     <meta charset="utf-8">
     <title>League of Legends</title>
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="logoLol hide" id="cabecera"></header>
     <nav class="hide" id="barra">
-      <ul class="menu flex">
-        <li><a href="main.js" class="btn-opciones">INICIO</a></li>
-        <button type="button" class="btn-opciones" id="campeones">CAMPEONES</button>
-        <li><a href="main.js" class="btn-opciones">ESTADISTICA</a></li>
-     </ul>
+        <ul class="menu flex">
+            <li><a href="main.js" class="btn-opciones">INICIO</a></li>
+            <button type="button" class="btn-opciones" id="campeones">CAMPEONES</button>
+            <li><a href="main.js" class="btn-opciones">ESTADISTICA</a></li>
+        </ul>
     </nav>
     <section id="pantalla-login" class="pantalla login">
-      <div class="vista-login flex">
-        <div class="cuadro-login flex">
-          <header class="logo"></header>
-          <form id="cajaLogin" class="caja-login flex">
-            <h2>Usuario</h2>
-            <input type="text" id="usuario" class="cuadro-de-texto">
-            <h2 class="etiqueta-contrasena">Contraseña</h2>
-            <input type="password" id="password" class="cuadro-de-texto">
-            <p id="mensajeError"></p>
-          </form>
-          <div class="cuadro-boton flex">
-            <button type="button" id="ingresar" class="buttonPass">INGRESA</button>
-          </div>
+        <div class="vista-login flex">
+            <div class="cuadro-login flex">
+                <header class="logo"></header>
+                <form id="cajaLogin" class="caja-login flex">
+                    <h2>Usuario</h2>
+                    <input type="text" id="usuario" class="cuadro-de-texto">
+                    <h2 class="etiqueta-contrasena">Contraseña</h2>
+                    <input type="password" id="password" class="cuadro-de-texto">
+                    <p id="mensajeError"></p>
+                </form>
+                <div class="cuadro-boton flex">
+                    <button type="button" id="ingresar" class="buttonPass">INGRESA</button>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
     <main>
 
-      <div id="pantalla-bienvenida" class="pantalla bienvenida hide">
-        <section id="vista-dos" class="pantalla vista-dos flex">
-          <div class="caja-informacion flex">
-            <h2>Información sobre el juego</h2>
-            <p> League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la
-              intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos
-              campeones, cada uno con un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos
-              campos de batalla y modos de juego. Con un plantel de campeones en constante expansión, actualizaciones
-              frecuentes y un emocionante panorama competitivo, League of Legends ofrece posibilidades de juego
-              ilimitadas a usuarios de todos los niveles de habilidad.</p>
-          </div>
-        </section>
-      </div>
+        <div id="pantalla-bienvenida" class="pantalla bienvenida hide">
+            <section id="vista-dos" class="pantalla vista-dos flex">
+                <div class="caja-informacion flex">
+                    <h2>Información sobre el juego</h2>
+                    <p> League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con
+                        un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego. Con un plantel de campeones en constante expansión, actualizaciones frecuentes y un emocionante panorama competitivo,
+                        League of Legends ofrece posibilidades de juego ilimitadas a usuarios de todos los niveles de habilidad.</p>
+                </div>
+            </section>
+        </div>
 
-    
-   <div id="pantallaCampeones" class="pantalla-campeones hide ">
-     <div class="flex-campeones">
-     <section id="vista3" class="campeones-flex">
-      <p id="name" class="padre"></p>
-     </section>
-     <aside class="aside">
-      
 
-          <select id="tagk"class="filtrarTipo">
+        <div id="pantallaCampeones" class="pantalla-campeones hide ">
+            <div class="flex-campeones">
+                <section id="vista3" class="campeones-flex">
+                    <p id="name" class="padre"></p>
+                </section>
+                <aside class="aside">
+
+
+                    <select id="tagk" class="filtrarTipo">
             <option value disabled selected>TIPO</option>
             <option value="Assassin">Assassin</option>
             <option value="Fighter">Fighter</option>
@@ -68,24 +65,24 @@
             <option value="Support">Support</option>
             <option value="Tank">Tank</option>
           </select>
-          <select class="poder" id="ad">
-            <option value="" selected>AD</option>
+                    <select class="poder" id="ad">
+            <option value disabled selected>ATAQUE</option>         
             <option value="0">Asc</option>
             <option value="1">Desc</option>
           </select>
-        <select class="orden">
+                    <select class="orden">
           <option value disabled selected>ORDEN</option>
           <option value="a-z">A-Z</option>
           <option value="z-a">Z-A</option>
        </select>
-     </aside>
-   </div>
-</div>
+                </aside>
+            </div>
+        </div>
     </main>
     <footer></footer>
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-  </body>
+</body>
 
 </html>

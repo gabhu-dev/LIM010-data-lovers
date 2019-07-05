@@ -6,32 +6,36 @@
 .hide {
     display: none;
 }
-.flex{
+
+.flex {
     display: flex;
 }
 
+
 /*pantalla global*/
 
-.pantalla,.vista-login {
+.pantalla,
+.vista-login {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.vista-login{
+
+.vista-login {
     justify-content: center;
     align-items: center;
 }
+
 
 /*pantallas*/
 
 .login {
     background-image: url(img/Lol.jpg);
-    
 }
 
 .vista-dos {
-   align-items: center;
-   justify-content: center;
+    align-items: center;
+    justify-content: center;
     background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d3/97/fa/d397faf0fec8ddd29c45bf847cbb7c41.gif);
 }
 
@@ -41,7 +45,6 @@
     background-color: #00000059;
     align-items: center;
     flex-direction: column;
-    
 }
 
 .logo {
@@ -73,8 +76,9 @@
     align-items: flex-end;
     flex-direction: column;
 }
-.flex-campeones{
-display: flex;    
+
+.flex-campeones {
+    display: flex;
     flex-direction: row-reverse;
 }
 
@@ -87,13 +91,14 @@ display: flex;
     background-color: black;
     color: white;
 }
-.btn-opciones{
+
+.btn-opciones {
     background-color: black;
     color: #E3B656;
     border: none;
-    
 }
-.caja-informacion{
+
+.caja-informacion {
     flex-direction: column;
     background-color: #020e0e6b;
     color: #3695ba;
@@ -101,10 +106,10 @@ display: flex;
     height: 155px;
     padding: 20px;
     font-size: 18px;
-   
 }
 
-h2, #mensajeError {
+h2,
+#mensajeError {
     font-size: 19px;
     color: white;
     margin-top: 14px;
@@ -129,14 +134,16 @@ h2, #mensajeError {
     justify-content: space-around;
     align-content: center;
 }
-nav> ul li a{
+
+nav>ul li a {
     text-decoration: none;
 }
-.campeones-flex{
+
+.campeones-flex {
     width: 80%;
- 
 }
-.personajes-flex{
+
+.personajes-flex {
     display: inline-block;
     width: 100px;
     height: 100px;
@@ -145,40 +152,60 @@ nav> ul li a{
     vertical-align: top;
     border: 1px solid yellow;
 }
-.padre{
+
+.padre {
     text-align: center;
 }
-.aside{
+
+.aside {
     width: 20%;
     height: 500px;
-    display:inline-block;
+    display: inline-block;
     background: #3695ba;
 }
-@media(max-width:375px){
-    .login, .vista-login ,.cuadro-login{
-height:667px ;
-width: 375px;
+
+@media(max-width:375px) {
+    .login,
+    .vista-login,
+    .cuadro-login {
+        height: 667px;
+        width: 375px;
     }
-    .caja-login{
-height: 210px;
-width: 335px;
+    .caja-login {
+        height: 210px;
+        width: 335px;
     }
-    .cuadro-boton{
-height: 84px;
-width: 335px;
+    .cuadro-boton {
+        height: 84px;
+        width: 335px;
     }
 }
-@media(max-width:320px){
-    .login, .vista-login ,.cuadro-login{
-height: 568px;
-width: 320px; 
+
+@media(max-width:320px) {
+    .login,
+    .vista-login,
+    .cuadro-login {
+        height: 568px;
+        width: 320px;
+    }
+    .caja-login {
+        height: 210px;
+        width: 280px;
+    }
+    .cuadro-boton {
+        height: 84px;
+        width: 280px;
+    }
 }
-.caja-login{
-height: 210px;
-width: 280px;
-}
-.cuadro-boton{
-height: 84px;
-width: 280px;
-}
+
+@media(max-width:768px) {
+    .login,
+    .cuadro-login {
+        height: 568px;
+        width: 320px;
+    }
+    .caja-login {
+        width: 280px;
+        height: 210px;
+    }
 }
