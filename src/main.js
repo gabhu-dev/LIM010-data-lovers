@@ -55,10 +55,15 @@ tagk.addEventListener('change', () => {
   document.getElementById('name').innerHTML = vacio;
 });
 
+const az = document.getElementById('az');
 az.addEventListener('change', () => {
-  const azs = document.getElementById('az').value;
-  let array2 = sortAtaque(arrayLOL, azs.value);
-  let vacio1 = mostrarCampeones(array2);
-  document.getElementById('name').innerHTML = vacio1;
-  console.log()
+  let array2 = sortAtaque(arrayLOL, az.value);
+  document.getElementById('name').innerHTML = mostrarCampeones(array2);
+  //console.log()
+});
+//orden de ataque
+const orden = document.getElementById('orden-alfabetico');
+orden.addEventListener('change', () => {
+  let array3 = sortAlfa(arrayLOL,orden.value);
+  document.getElementById('name').innerHTML = mostrarCampeones(array3);
 });
