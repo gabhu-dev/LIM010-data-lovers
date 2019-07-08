@@ -19,32 +19,47 @@ const mostrarAsesinos = (data, condition) => {
 
 // ordenando segun el orden alfabético
 const sortAtaque = (data, condition)=> {
-  const mostrarA = data.sort((ab, bc) => {
+  const mostrarA = data.sort((a, b) => {
     // ordenando de menor a mayor
-    if (ab.data[i].name > bc.data[i].name) {
+    if (a.name > b.name) {
       return 1;
     }
-    if (ab.data[i].name < bc.data[i].name) {
+    if (a.name < b.name) {
       return -1;
     }
     // a must be equal to b
     return 0;
   });    
   if (condition === '0') {
-    return mostrarA();
+    return mostrarA;
   }
   if (condition === '1') {
     return mostrarA.reverse();
   }
+  return 0;
 };
-
-/* const alfabetico = (data, condition) => {
-    const mostrar = data.sort((a, b) => {
-        if ((a.name < b.name) ? -1 : 1 === condition);
-
-    })
-}*/
+const sortAlfa= (data, condition)=> {
+  const mostrarB = data.sort((a, b) => {
+    // ordenando de menor a mayor
+    if (a.attackdamage > b.attackdamage) {
+      return 1;
+    }
+    if (a.attackdamage < b.attackdamage) {
+      return -1;
+    }
+    // a must be equal to b
+    return 0;
+  });    
+  if (condition === '0') {
+    return mostrarB;
+  }
+  if (condition === '1') {
+    return mostrarB.reverse();
+  }
+  return 0;
+};
 
 window.mostrarCampeones = mostrarCampeones;
 window.mostrarAsesinos = mostrarAsesinos;
 window.sortAtaque = sortAtaque;
+window.sortAlfa = sortAlfa;
