@@ -29,14 +29,11 @@
 
 /*pantallas*/
 
+
+/*pantalla 1*/
+
 .login {
     background-image: url(img/Lol.jpg);
-}
-
-.vista-dos {
-    align-items: center;
-    justify-content: center;
-    background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d3/97/fa/d397faf0fec8ddd29c45bf847cbb7c41.gif);
 }
 
 .cuadro-login {
@@ -45,6 +42,7 @@
     background-color: #00000059;
     align-items: center;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .logo {
@@ -63,11 +61,13 @@
 }
 
 .cuadro-de-texto {
-    width: 335px;
-    height: 45px;
+    width: 306px;
+    height: 22px;
+    padding: 14px;
     border-radius: 5px;
     border: none;
     outline: none;
+    font-size: 30px;
 }
 
 .cuadro-boton {
@@ -77,12 +77,7 @@
     flex-direction: column;
 }
 
-.flex-campeones {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.buttonPass {
+.button-pass {
     height: 45px;
     width: 335px;
     outline: none;
@@ -92,8 +87,21 @@
     color: white;
 }
 
+
+/*pantalla 2*/
+
+.vista-dos {
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d3/97/fa/d397faf0fec8ddd29c45bf847cbb7c41.gif);
+}
+
+.flex-campeones {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .btn-opciones {
-    background-color: black;
     color: #E3B656;
     border: none;
 }
@@ -129,29 +137,34 @@ h2,
     width: 100%;
     height: 50px;
     background-color: black;
-    border-top: 1px solid #E3B656;
-    border-bottom: 1px solid #E3B656;
+    border-top: 1px solid #7d6033;
+    border-bottom: 1px solid #7d6033;
     justify-content: space-around;
-    align-content: center;
+    align-items: center;
 }
 
-nav>ul li a {
+.nav ul li {
     text-decoration: none;
+    list-style: none;
 }
 
 .campeones-flex {
     width: 80%;
 }
-
+.img{
+    width: 80%;
+}
 .personajes-flex {
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 15%;
+    height: 20%;
     padding: 5px;
-    margin: 5px;
+    margin: 1%;
     vertical-align: top;
     border: 1px solid yellow;
 }
+
+
 
 .padre {
     text-align: center;
@@ -162,6 +175,15 @@ nav>ul li a {
     height: 500px;
     display: inline-block;
     background: #3695ba;
+}
+
+footer {
+    height: 40px;
+    background-color: black;
+    border-top: 2px solid #7d6033;
+    color: rgba(209, 197, 169, 0.4);
+    text-align: center;
+    padding-top: 10px;
 }
 
 @media(max-width:375px) {
