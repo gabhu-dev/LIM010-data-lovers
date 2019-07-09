@@ -20,50 +20,56 @@ let arrayLOL = Object.values(LOL.data);
 
 // Funciones
 empezar.addEventListener('click', () => {
-  const datos = contrasena.value;
-  const datosUsuario = usuario.value;
-  if (password < 2) {
-    if (datos === '' && datosUsuario === '') {
-      vistaLogin.classList.add('hide');
-      vistaBienvenida.classList.remove('hide');
-      cabecera.classList.remove('hide');
-      barraNavegacion.classList.remove('hide');
-    } else {
-      document.getElementById('mensajeError').innerHTML = '*Datos Incorrectos*';
-      password++;
+    const datos = contrasena.value;
+    const datosUsuario = usuario.value;
+    if (password < 2) {
+        if (datos === '' && datosUsuario === '') {
+            vistaLogin.classList.add('hide');
+            vistaBienvenida.classList.remove('hide');
+            cabecera.classList.remove('hide');
+            barraNavegacion.classList.remove('hide');
+        } else {
+            document.getElementById('mensajeError').innerHTML = '*Datos Incorrectos*';
+            password++;
+        }
     }
-  }
 });
 
-begin.addEventListener('click', ()=>{
-  vistaCampeones.classList.add('hide'); 
-  vistaBienvenida.classList.remove('hide');   
+begin.addEventListener('click', () => {
+    vistaCampeones.classList.add('hide');
+    vistaBienvenida.classList.remove('hide');
 });
 campeones.addEventListener('click', () => {
-  let array = '';
-  array = mostrarCampeones(arrayLOL);
-  document.getElementById('name').innerHTML = array;
-  vistaBienvenida.classList.add('hide');
-  vistaCampeones.classList.remove('hide');
+    let array = '';
+    array = mostrarCampeones(arrayLOL);
+    document.getElementById('name').innerHTML = array;
+    vistaBienvenida.classList.add('hide');
+    vistaCampeones.classList.remove('hide');
 });
 tagk.addEventListener('change', () => {
-  const agarre = document.getElementById('tagk').value;
-  let vacio = '';
-  let array1 = [];
-  array1 = mostrarAsesinos(arrayLOL, agarre);
-  vacio = mostrarCampeones(array1);
-  document.getElementById('name').innerHTML = vacio;
+    const agarre = document.getElementById('tagk').value;
+    let vacio = '';
+    let array1 = [];
+    array1 = mostrarAsesinos(arrayLOL, agarre);
+    vacio = mostrarCampeones(array1);
+    document.getElementById('name').innerHTML = vacio;
 });
 
 const az = document.getElementById('az');
 az.addEventListener('change', () => {
-  let array2 = sortAtaque(arrayLOL, az.value);
-  document.getElementById('name').innerHTML = mostrarCampeones(array2);
-  //console.log()
+    let array2 = sortAtaque(arrayLOL, az.value);
+    document.getElementById('name').innerHTML = mostrarCampeones(array2);
+    //console.log()
 });
 //orden de ataque
 const orden = document.getElementById('orden-alfabetico');
 orden.addEventListener('change', () => {
-  let array3 = sortAlfa(arrayLOL,orden.value);
-  document.getElementById('name').innerHTML = mostrarCampeones(array3);
+    let array3 = sortAlfa(arrayLOL, orden.value);
+    document.getElementById('name').innerHTML = mostrarCampeones(array3);
 });
+
+// para ver las obtener las imagenes
+const picture_1 = document.getElementById('picture');
+picture_1.addEventListener('click', () => {
+
+})
