@@ -5,6 +5,7 @@ const usuario = document.getElementById('usuario');
 const empezar = document.getElementById('ingresar');
 const campeones = document.getElementById('campeones');
 const begin = document.getElementById('inicio');
+const name=document.getElementById('name')
 // VISTAS
 const vistaLogin = document.getElementById('pantalla-login');
 const vistaBienvenida = document.getElementById('pantalla-bienvenida');
@@ -69,7 +70,20 @@ orden.addEventListener('change', () => {
 });
 
 // para ver las obtener las imagenes
-const picture_1 = document.getElementById('picture');
-picture_1.addEventListener('click', () => {
+name.addEventListener('click',()=>{
+    const propiedad=event.target.parentElement.id-1;
+    if(event.target.parentElement.getAttribute('name')==='propiedad'){
+    //mostramnos modal
+    document.getElementById('modal').classList.remove('hide');
+    //insertamos caracteristicas en el modal
+    document.getElementById('character').innerHTML = `
+    <img  class = "imgModal" src=" + ${arrayLOL[propiedad].img} "></img>
+    <p> ${arrayLOL[propiedad].name}</p>
+    <p>  ${arrayLOL[propiedad].tagk} </p>
+    `;
+    }
+});
 
-})
+close.addEventListener('click', () => {
+    document.getElementById('modal').classList.add('hide');
+});
