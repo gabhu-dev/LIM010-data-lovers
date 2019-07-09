@@ -59,9 +59,9 @@ const az = document.getElementById('az');
 az.addEventListener('change', () => {
   let array2 = sortAtaque(arrayLOL, az.value);
   document.getElementById('name').innerHTML = mostrarCampeones(array2);
-  //console.log()
+  // console.log()
 });
-//orden de ataque
+// orden de ataque
 const orden = document.getElementById('orden-alfabetico');
 orden.addEventListener('change', () => {
   let array3 = sortAlfa(arrayLOL,orden.value);
