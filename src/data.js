@@ -5,7 +5,12 @@
 const mostrarCampeones = (data) => {
     let textC = '';
     for (let i = 0; i < data.length; i++) {
-        const mostrar = '<div class = personajes-flex><img  class = "img"src="' + data[i].splash + '"></img><p class="decorado">' + data[i].name + '</p><p class="decorado">' + data[i].title + '</p></div>';
+        const mostrar = `
+        <div class = personajes-flex name="jalar">
+        <img  class = "img"src='${data[i].splash}'/>
+        <p class="decorado">${data[i].name}</p>
+        <p class="decorado">${data[i].title}</p>
+        </div>`;
         textC += mostrar;
     }
     return textC;

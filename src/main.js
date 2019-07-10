@@ -5,8 +5,9 @@ const usuario = document.getElementById('usuario');
 const empezar = document.getElementById('ingresar');
 const campeones = document.getElementById('campeones');
 const begin = document.getElementById('inicio');
-const name = document.getElementById('name')
-    // VISTAS
+const descripcion = document.getElementById('name')
+const close = document.getElementById('close');
+// VISTAS
 const vistaLogin = document.getElementById('pantalla-login');
 const vistaBienvenida = document.getElementById('pantalla-bienvenida');
 const vistaCampeones = document.getElementById('pantalla-campeones');
@@ -70,20 +71,16 @@ orden.addEventListener('change', () => {
 });
 
 // para ver las obtener las imagenes
-name.addEventListener('click', () => {
-    const propiedad = event.target.parentElement.id - 1;
-    if (event.target.parentElement.getAttribute('name') === 'propiedad') {
+descripcion.addEventListener('click', () => {
+    const lolcito = event.target.parentElement.id - 1;
+    if (event.target.parentElement.getAttribute('name') === 'jalar') {
         //mostramnos modal
-        document.getElementById('modal').classList.remove('hide');
+        document.getElementById('mi-modal').classList.remove('hide');
         //insertamos caracteristicas en el modal
-        document.getElementById('character').innerHTML = `
-    <img  class = "imgModal" src=" + ${arrayLOL[propiedad].img} "></img>
-    <p> ${arrayLOL[propiedad].name}</p>
-    <p>  ${arrayLOL[propiedad].tagk} </p>
+        document.getElementById('info-de-lol').innerHTML = `
+    <img  class = "imgModal" src="${arrayLOL[lolcito].img} ">
+    <p> ${arrayLOL[lolcito].id}</p>
+    <p>  ${arrayLOL[lolcito].tags} </p>
     `;
     }
-});
-
-close.addEventListener('click', () => {
-    document.getElementById('modal').classList.add('hide');
 });

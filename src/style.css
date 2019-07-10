@@ -3,6 +3,7 @@
         padding: 0;
         box-sizing: border-box;
     }
+    /*RECICLANDO */
     
     .hide {
         display: none;
@@ -11,23 +12,18 @@
     .flex {
         display: flex;
     }
-    /*pantalla global*/
     
-    .pantalla,
-    .vista-login {
+    .pantalla {
         height: 100vh;
         background-size: cover;
         background-repeat: no-repeat;
     }
+    /*--------------------------------------------------*/
+    /*PANTALLA 1*/
     
     .vista-login {
         justify-content: center;
         align-items: center;
-    }
-    /*pantallas*/
-    /*pantalla 1*/
-    
-    .login {
         background-image: url(img/Lol.jpg);
     }
     
@@ -56,8 +52,8 @@
     }
     
     .cuadro-de-texto {
-        width: 306px;
-        height: 22px;
+        width: 335px;
+        height: 45px;
         padding: 14px;
         border-radius: 5px;
         border: none;
@@ -68,7 +64,7 @@
     .cuadro-boton {
         height: 84px;
         width: 335px;
-        align-items: flex-end;
+        align-items: center;
         flex-direction: column;
     }
     
@@ -83,11 +79,21 @@
         font-family: 'Cuprum', sans-serif;
         font-size: 25px;
     }
-    /*pantalla 2*/
+    
+    .texto {
+        font-size: 19px;
+        color: white;
+        margin-top: 14px;
+        font-family: 'Cuprum', sans-serif;
+        font-weight: bold;
+    }
+    /*------------------------------------------------------*/
+    /*PANTALLA 2*/
     
     .vista-dos {
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d3/97/fa/d397faf0fec8ddd29c45bf847cbb7c41.gif);
     }
     
@@ -116,34 +122,6 @@
         font-size: 25px;
     }
     
-    .texto {
-        font-size: 19px;
-        color: white;
-        margin-top: 14px;
-        font-family: 'Cuprum', sans-serif;
-        font-weight: bold;
-    }
-    
-    .decorado {
-        color: aliceblue;
-    }
-    
-    .decorado:hover {
-        color: rgb(245, 188, 33);
-        border: solid white;
-        border-width: 0 0.1rem;
-    }
-    
-    .logo-lol {
-        width: 100%;
-        height: 100px;
-        background-color: black;
-        background-image: url(img/logo-fondo.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-    }
-    
     .menu {
         width: 100%;
         height: 50px;
@@ -158,7 +136,29 @@
         text-decoration: none;
         list-style: none;
     }
+    /*--------------------------------------------------*/
+    /*PANTALLA 3*/
+    
+    .decorado {
+        color: aliceblue;
+    }
+    
+    .decorado:hover {
+        color: rgb(245, 188, 33);
+        border: solid white;
+        border-width: 0 0.1rem;
+    }
     /* ESTILOS PARA IMAGENES*/
+    
+    .logo-lol {
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        background-image: url(img/logo-fondo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
     
     .campeones-flex {
         width: 100%;
@@ -309,4 +309,54 @@
             height: 84px;
             width: 280px;
         }
+    }
+    
+    .modal {
+        position: fixed;
+        display: flex;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(36, 39, 24, 0.6);
+    }
+    
+    .imgModal {
+        width: 188.5px;
+        height: 197px;
+    }
+    
+    .info {
+        height: 80%;
+        width: 80%;
+        /* position: relative; */
+        display: flex;
+        flex-direction: column;
+    }
+    /* Modal Content/Box */
+    
+    .modal-content {
+        background-color: white;
+        margin: auto;
+        padding: 20px;
+        width: 70%;
+        height: 50%;
+        border-radius: 40px;
+    }
+    /* The Close Button */
+    
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
     }

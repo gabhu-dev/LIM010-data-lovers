@@ -18,8 +18,8 @@
             <li id="estadistica" class="btn-opciones">ESTADISTICA</li>
         </ul>
     </nav>
-    <section id="pantalla-login" class="pantalla login">
-        <div class="vista-login flex">
+    <section id="pantalla-login" class="login">
+        <div class="pantalla vista-login flex">
             <div class="cuadro-login flex">
                 <header class="logo"></header>
                 <form id="caja-login" class="caja-login flex">
@@ -27,16 +27,18 @@
                     <input type="text" id="usuario" class="cuadro-de-texto">
                     <h2 class="texto">Contraseña</h2>
                     <input type="password" id="password" class="cuadro-de-texto">
-                    <p id="mensaje-error" class="texto"></p>
+                    <p1><strong>Olvidaste tu contraseña?</strong></p1>
                 </form>
+                <p id="mensaje-error" class="texto"></p>
                 <div class="cuadro-boton flex">
                     <button type="button" id="ingresar" class="button-pass">INGRESA</button>
+                    <p2>¿No tienes cuenta?<strong>REGISTRATE</strong></p2>
                 </div>
             </div>
         </div>
     </section>
     <main>
-        <div id="pantalla-bienvenida" class="pantalla bienvenida hide">
+        <div id="pantalla-bienvenida" class="bienvenida hide">
             <section id="vista-dos" class="pantalla vista-dos flex">
                 <div class="caja-informacion flex">
                     <h2>Información sobre el juego</h2>
@@ -84,6 +86,19 @@
             </div>
         </div>
     </main>
+    <!--creo mi modal-->
+    <div id="mi-modal" class="modal hide">
+        <!--modal content-->
+        <div class="modal-content">
+            <span id="close" class="close">&times</span>
+            <div id="info-de-lol" class="info"></div>
+        </div>
+    </div>
+
+
+
+
+
     <footer> ©2019 RiGa Games Inc.Todos los derechos reservados.RiGa Game,League of Legends es marca registrada</footer>
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
