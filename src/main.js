@@ -5,8 +5,8 @@ const usuario = document.getElementById('usuario');
 const empezar = document.getElementById('ingresar');
 const campeones = document.getElementById('campeones');
 const begin = document.getElementById('inicio');
-const name=document.getElementById('name')
-// VISTAS
+const name = document.getElementById('name')
+    // VISTAS
 const vistaLogin = document.getElementById('pantalla-login');
 const vistaBienvenida = document.getElementById('pantalla-bienvenida');
 const vistaCampeones = document.getElementById('pantalla-campeones');
@@ -60,9 +60,9 @@ const az = document.getElementById('az');
 az.addEventListener('change', () => {
     let array2 = sortAtaque(arrayLOL, az.value);
     document.getElementById('name').innerHTML = mostrarCampeones(array2);
-    //console.log()
+    // console.log()
 });
-//orden de ataque
+// orden de ataque
 const orden = document.getElementById('orden-alfabetico');
 orden.addEventListener('change', () => {
     let array3 = sortAlfa(arrayLOL, orden.value);
@@ -70,13 +70,13 @@ orden.addEventListener('change', () => {
 });
 
 // para ver las obtener las imagenes
-name.addEventListener('click',()=>{
-    const propiedad=event.target.parentElement.id-1;
-    if(event.target.parentElement.getAttribute('name')==='propiedad'){
-    //mostramnos modal
-    document.getElementById('modal').classList.remove('hide');
-    //insertamos caracteristicas en el modal
-    document.getElementById('character').innerHTML = `
+name.addEventListener('click', () => {
+    const propiedad = event.target.parentElement.id - 1;
+    if (event.target.parentElement.getAttribute('name') === 'propiedad') {
+        //mostramnos modal
+        document.getElementById('modal').classList.remove('hide');
+        //insertamos caracteristicas en el modal
+        document.getElementById('character').innerHTML = `
     <img  class = "imgModal" src=" + ${arrayLOL[propiedad].img} "></img>
     <p> ${arrayLOL[propiedad].name}</p>
     <p>  ${arrayLOL[propiedad].tagk} </p>

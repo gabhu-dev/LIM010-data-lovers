@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>League of Legends</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cuprum|EB+Garamond&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -22,11 +23,11 @@
             <div class="cuadro-login flex">
                 <header class="logo"></header>
                 <form id="caja-login" class="caja-login flex">
-                    <h2>Usuario</h2>
+                    <h2 class="texto">Usuario</h2>
                     <input type="text" id="usuario" class="cuadro-de-texto">
-                    <h2 class="etiqueta-contrasena">Contraseña</h2>
+                    <h2 class="texto">Contraseña</h2>
                     <input type="password" id="password" class="cuadro-de-texto">
-                    <p id="mensaje-error"></p>
+                    <p id="mensaje-error" class="texto"></p>
                 </form>
                 <div class="cuadro-boton flex">
                     <button type="button" id="ingresar" class="button-pass">INGRESA</button>
@@ -40,22 +41,22 @@
                 <div class="caja-informacion flex">
                     <h2>Información sobre el juego</h2>
                     <p> League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con
-                        un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego. Con un plantel de campeones en constante expansión, actualizaciones frecuentes y un emocionante panorama competitivo,
-                        League of Legends ofrece posibilidades de juego ilimitadas a usuarios de todos los niveles de habilidad.</p>
+                        un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego.</p>
                 </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KpxjwIaW0EM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </section>
         </div>
 
 
         <div id="pantalla-campeones" class="pantalla-campeones hide ">
-            <div class="flex-campeones">
-                <section id="vista3" class="campeones-flex">
-                        <p id="name" class="padre"></p>
-                   </div>
-                </section>
+            <div class="flexi-campeones">
+
                 <aside class="aside">
 
-                    <select id="tagk" class="filtrar-tipo">
+                    <input type="checkbox" class="checkbox" id="check">
+                    <label class="menu-a" for="check">|||</label>
+                    <div class="left-panel">
+                        <select id="tagk" class="orden">
   <option value disabled selected>TIPO</option>
   <option value="Assassin">Assassin</option>
   <option value="Fighter">Fighter</option>
@@ -64,27 +65,25 @@
   <option value="Support">Support</option>
   <option value="Tank">Tank</option>
 </select>
-                    <select class="poder" id="orden-alfabetico">
+                        <select class="orden" id="orden-alfabetico">
   <option value disabled selected>ATAQUE</option>         
   <option value="0">Asc</option>
   <option value="1">Desc</option>
 </select>
-                    <select class="orden" id="az">
+                        <select class="orden" id="az">
   <option value disabled selected>ORDEN</option>
   <option value="0">A-Z</option>
   <option value="1">Z-A</option>
+
 </select>
-                </aside>
+
+                    </div>
+                    <section id="vista3" class="campeones-flex">
+                        <p id="name" class="padre"></p>
+                    </section>
             </div>
         </div>
     </main>
-    <div id="modal" class="modal_1 ">
-        <div class="modal-content">
-            <span id="close" class="close_1">&times;</span>
-            <div id="character" class="character"></div>
-        </div>
-    </div>
-    </div>
     <footer> ©2019 RiGa Games Inc.Todos los derechos reservados.RiGa Game,League of Legends es marca registrada</footer>
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
