@@ -22,6 +22,11 @@ const mostrarAsesinos = (data, condition) => {
     return mostrar;
 };
 
+const mostrarInfo = (data, condition) => {
+    const mostrar = data.filter(caracter => (caracter.tags[0] === condition && caracter.name[1] === condition));
+    return mostrar;
+};
+window.mostrarInfo = mostrarInfo;
 // ordenando segun el orden alfabético
 const sortAtaque = (data, condition) => {
     const mostrarA = data.sort((a, b) => {

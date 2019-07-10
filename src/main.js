@@ -6,7 +6,7 @@ const empezar = document.getElementById('ingresar');
 const campeones = document.getElementById('campeones');
 const begin = document.getElementById('inicio');
 const descripcion = document.getElementById('name')
-const close = document.getElementById('close');
+
 // VISTAS
 const vistaLogin = document.getElementById('pantalla-login');
 const vistaBienvenida = document.getElementById('pantalla-bienvenida');
@@ -70,17 +70,30 @@ orden.addEventListener('change', () => {
     document.getElementById('name').innerHTML = mostrarCampeones(array3);
 });
 
+
+descripcion.addEventListener('click', () => {
+    let vacio = '';
+    let array1 = [];
+    document.getElementById('mi-modal').innerHTML = mostrarInfo(array);
+});
+tagk.addEventListener('change', () => {
+    const agarre = document.getElementById('tagk').value;
+    let vacio = '';
+    let array1 = [];
+    array1 = mostrarInfo(arrayLOL, agarre);
+    vacio = mostrarCampeones(array1);
+    document.getElementById('name').innerHTML = vacio;
+});
 // para ver las obtener las imagenes
 descripcion.addEventListener('click', () => {
-    const lolcito = event.target.parentElement.id - 1;
-    if (event.target.parentElement.getAttribute('name') === 'jalar') {
+    const lolcito = event.target.parentElement;
+    if (event.target.parentElement.getAttribute('name') === 'jalar'){
         //mostramnos modal
         document.getElementById('mi-modal').classList.remove('hide');
         //insertamos caracteristicas en el modal
-        document.getElementById('info-de-lol').innerHTML = `
-    <img  class = "imgModal" src="${arrayLOL[lolcito].img} ">
-    <p> ${arrayLOL[lolcito].id}</p>
-    <p>  ${arrayLOL[lolcito].tags} </p>
-    `;
-    }
+        document.getElementById('info-de-lol').innerHTML = mostrarInfo;
+}});
+const cerrar = document.getElementById('close');
+cerrar.addEventListener('click',()=>{
+    document.getElementById('mi-modal').classList.add('hide');
 });
