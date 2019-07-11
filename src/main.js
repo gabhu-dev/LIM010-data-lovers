@@ -71,29 +71,22 @@ orden.addEventListener('change', () => {
 });
 
 
-descripcion.addEventListener('click', () => {
-    let vacio = '';
-    let array1 = [];
-    document.getElementById('mi-modal').innerHTML = mostrarInfo(array);
-});
-tagk.addEventListener('change', () => {
-    const agarre = document.getElementById('tagk').value;
-    let vacio = '';
-    let array1 = [];
-    array1 = mostrarInfo(arrayLOL, agarre);
-    vacio = mostrarCampeones(array1);
-    document.getElementById('name').innerHTML = vacio;
-});
+
+
 // para ver las obtener las imagenes
 descripcion.addEventListener('click', () => {
-    const lolcito = event.target.parentElement;
-    if (event.target.parentElement.getAttribute('name') === 'jalar'){
+    const lolcito = event.target.key;
+    if (event.target.getAttribute('name') === 'jalar') {
         //mostramnos modal
         document.getElementById('mi-modal').classList.remove('hide');
         //insertamos caracteristicas en el modal
-        document.getElementById('info-de-lol').innerHTML = mostrarInfo;
-}});
+        document.getElementById('info-de-lol').innerHTML = `
+        <img  class = "imgModal"src="${arrayLOL[lolcito].splash}"/>
+        <p class="nu">${arrayLOL[lolcito].title}</p>`;
+    }
+});
 const cerrar = document.getElementById('close');
-cerrar.addEventListener('click',()=>{
+cerrar.addEventListener('click', () => {
     document.getElementById('mi-modal').classList.add('hide');
 });
+//let modal =document.getElementById('mi-modal');

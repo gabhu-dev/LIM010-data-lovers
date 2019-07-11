@@ -14,7 +14,27 @@ const mostrarCampeones = (data) => {
         textC += mostrar;
     }
     return textC;
+
 };
+// recorrer toda la informacion,blurd
+/*const runInfoBlurd = (data) => {
+    let textD = '';
+    for (let i = 0; i < data.length; i++) {
+        const mostrar = `
+     <div class = caracteristicas>
+     <img  class = "imagen"src='${data[i].splash}'/>
+     <p class="decorade">${data[i].name}</p>
+     <p class="decorade">${data[i].title}</p>
+     <p class="info">${data[i].blurb}</p>
+     <p class="descripcion">${data[i].info}</p>
+     </div>`;
+        textD += mostrar;
+    }
+    return textD;
+};
+
+window.runInfoBlurd = runInfoBlurd;*/
+
 // filtra solo imagen,titulo y nombre segun la condicion
 // la condicion es el tipo que selecciona el usuario
 const mostrarAsesinos = (data, condition) => {
@@ -22,11 +42,14 @@ const mostrarAsesinos = (data, condition) => {
     return mostrar;
 };
 
-const mostrarInfo = (data, condition) => {
+
+
+
+/*const mostrarInfo = (data, condition) => {
     const mostrar = data.filter(caracter => (caracter.tags[0] === condition && caracter.name[1] === condition));
     return mostrar;
 };
-window.mostrarInfo = mostrarInfo;
+window.mostrarInfo = mostrarInfo;*/
 // ordenando segun el orden alfabético
 const sortAtaque = (data, condition) => {
     const mostrarA = data.sort((a, b) => {
