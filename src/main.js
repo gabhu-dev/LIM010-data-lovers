@@ -75,14 +75,29 @@ orden.addEventListener('change', () => {
 
 // para ver las obtener las imagenes
 descripcion.addEventListener('click', () => {
-    const lolcito = event.target.key;
-    if (event.target.getAttribute('name') === 'jalar') {
+    const campeon = event.target.parentElement.id;
+    console.log(campeon);
+    const lolcito=arrayLOL.map(function(x){return x.id;}).indexOf(campeon);
+    console.log(lolcito);
+    if (event.target.parentElement.getAttribute('name') === 'jalar') {
         //mostramnos modal
         document.getElementById('mi-modal').classList.remove('hide');
         //insertamos caracteristicas en el modal
         document.getElementById('info-de-lol').innerHTML = `
+       <div>
+       <div class="contenido-modal">
+       <p class="su-id">${arrayLOL[lolcito].id}</p>
         <img  class = "imgModal"src="${arrayLOL[lolcito].splash}"/>
-        <p class="nu">${arrayLOL[lolcito].title}</p>`;
+        </div>
+        <div>
+        <p class="su-titulo">${arrayLOL[lolcito].title}</p>
+        <p class="su-info">ataque:${arrayLOL[lolcito].info.attack}</p>
+        <p class="su-info">defensa:${arrayLOL[lolcito].info.defense}</p>
+        <p class="su-info">magic:${arrayLOL[lolcito].info.magic}</p>
+        <p class="su-info">dificultad:${arrayLOL[lolcito].info.difficulty}</p>
+        <p class="su-descripcion">${arrayLOL[lolcito].blurb}</p>
+        <div>
+        </div>`;
     }
 });
 const cerrar = document.getElementById('close');

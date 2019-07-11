@@ -6,7 +6,7 @@ const mostrarCampeones = (data) => {
     let textC = '';
     for (let i = 0; i < data.length; i++) {
         const mostrar = `
-        <div class = personajes-flex name="jalar">
+        <div class = personajes-flex name='jalar'id=${data[i].id}>
         <img  class = "img"src='${data[i].splash}'/>
         <p class="decorado">${data[i].name}</p>
         <p class="decorado">${data[i].title}</p>
@@ -43,13 +43,6 @@ const mostrarAsesinos = (data, condition) => {
 };
 
 
-
-
-/*const mostrarInfo = (data, condition) => {
-    const mostrar = data.filter(caracter => (caracter.tags[0] === condition && caracter.name[1] === condition));
-    return mostrar;
-};
-window.mostrarInfo = mostrarInfo;*/
 // ordenando segun el orden alfabético
 const sortAtaque = (data, condition) => {
     const mostrarA = data.sort((a, b) => {
