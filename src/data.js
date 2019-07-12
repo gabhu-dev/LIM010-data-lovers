@@ -5,10 +5,16 @@
 const mostrarCampeones = (data) => {
   let textC = '';
   for (let i = 0; i < data.length; i++) {
-    const mostrar = '<div class = personajes-flex><img  class = "img"src="' + data[i].splash + '"></img><p class="decorado">' + data[i].name + '</p><p class="decorado">' + data[i].title + '</p></div>';
+    const mostrar = `
+      <div class = personajes-flex name='jalar'id=${data[i].id}>
+      <img  class = "img"src='${data[i].splash}'/>
+      <p class="decorado">${data[i].name}</p>
+      <p class="decorado">${data[i].title}</p>
+      </div>`;
     textC += mostrar;
   }
   return textC;
+
 };
 // filtra solo imagen,titulo y nombre segun la condicion
 // la condicion es el tipo que selecciona el usuario
@@ -18,13 +24,13 @@ const mostrarAsesinos = (data, condition) => {
 };
 
 // ordenando segun el orden alfabético
-const sortAtaque = (data, condition)=> {
-  const mostrarA = data.sort((a, b) => {
+const sortAlfa = (data, condition)=> {
+  const mostrarA = data.sort((ab, bc) => {
     // ordenando de menor a mayor
-    if (a.name > b.name) {
+    if (ab.name > bc.name) {
       return 1;
     }
-    if (a.name < b.name) {
+    if (ab.name < bc.name) {
       return -1;
     }
     // a must be equal to b
@@ -38,13 +44,13 @@ const sortAtaque = (data, condition)=> {
   }
   return 0;
 };
-const sortAlfa = (data, condition)=> {
-  const mostrarB = data.sort((a, b) => {
+const sortAtaque = (data, condition)=> {
+  const mostrarB = data.sort((ab, bc) => {
     // ordenando de menor a mayor
-    if (a.stats.attackdamage > b.stats.attackdamage) {
+    if (ab.stats.attackdamage > bc.stats.attackdamage) {
       return 1;
     }
-    if (a.stats.attackdamage < b.stats.attackdamage) {
+    if (ab.stats.attackdamage < bc.stats.attackdamage) {
       return -1;
     }
     // a must be equal to b

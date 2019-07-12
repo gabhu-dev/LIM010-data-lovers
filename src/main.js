@@ -5,6 +5,7 @@ const usuario = document.getElementById('usuario');
 const empezar = document.getElementById('ingresar');
 const campeones = document.getElementById('campeones');
 const begin = document.getElementById('inicio');
+const descripcion = document.getElementById('name');
 // VISTAS
 const vistaLogin = document.getElementById('pantalla-login');
 const vistaBienvenida = document.getElementById('pantalla-bienvenida');
@@ -13,7 +14,7 @@ const vistaCampeones = document.getElementById('pantalla-campeones');
 // CONTROLANDO HEADER
 const cabecera = document.getElementById('cabecera');
 const barraNavegacion = document.getElementById('barra');
-// const vistaCampeones = document.getElementById('pantallaCampeones')
+
 // Contador de intentos en login
 let password = 0;
 let arrayLOL = Object.values(LOL.data);
@@ -57,13 +58,61 @@ tagk.addEventListener('change', () => {
 
 const az = document.getElementById('az');
 az.addEventListener('change', () => {
-  let array2 = sortAtaque(arrayLOL, az.value);
-  document.getElementById('name').innerHTML = mostrarCampeones(array2);
-  // console.log()
+  let capturarAlfa = document.getElementById('tagk').value;
+  if (capturarAlfa === '0') {
+    let array3 = sortAlfa(arrayLOL, az.value);
+    document.getElementById('name').innerHTML = mostrarCampeones(array3);
+  } else {
+    const ar = mostrarAsesinos(arrayLOL, capturarAlfa);
+    let array2 = sortAlfa(ar, az.value);
+    document.getElementById('name').innerHTML = mostrarCampeones(array2);
+  } 
 });
 // orden de ataque
-const orden = document.getElementById('orden-alfabetico');
+const orden = document.getElementById('orden-ataque');
 orden.addEventListener('change', () => {
-  let array3 = sortAlfa(arrayLOL,orden.value);
-  document.getElementById('name').innerHTML = mostrarCampeones(array3);
+  let capturar = document.getElementById('tagk').value;  
+  if (capturar === '0') {
+    let array3 = sortAtaque(arrayLOL, orden.value);
+    document.getElementById('name').innerHTML = mostrarCampeones(array3);
+  } else {
+    const ar = mostrarAsesinos(arrayLOL, capturar);
+    let array2 = sortAtaque(ar, orden.value);
+    document.getElementById('name').innerHTML = mostrarCampeones(array2);
+  } 
 });
+// para ver las obtener las imagenes
+descripcion.addEventListener('click', () => {
+  const campeon = event.target.parentElement.id;
+  console.log(campeon);
+  const lolcito = arrayLOL.map(function(x) {
+    return x.id; 
+  }).indexOf(campeon);
+  console.log(lolcito);
+  if (event.target.parentElement.getAttribute('name') === 'jalar') {
+  // mostramnos modal
+    document.getElementById('mi-modal').classList.remove('hide');
+    // insertamos caracteristicas en el modal
+    document.getElementById('info-de-lol').innerHTML = `
+     <div class="info-descripcion flex">
+     <div class="contenido-modal flex">
+     <p class="su-id">${arrayLOL[lolcito].id}</p>
+      <img  class = "imgModal"src="${arrayLOL[lolcito].splash}"/> 
+      <p class="su-descripcion">${arrayLOL[lolcito].blurb}</p>
+      </div>
+      <div class="infor-macion flex">
+      <p class="su-titulo">${arrayLOL[lolcito].title}</p>
+      <p class="su-info">ataque:${arrayLOL[lolcito].info.attack}</p>
+      <p class="su-info">defensa:${arrayLOL[lolcito].info.defense}</p>
+      <p class="su-info">magic:${arrayLOL[lolcito].info.magic}</p>
+      <p class="su-info">dificultad:${arrayLOL[lolcito].info.difficulty}</p>
+    
+      <div>
+      </div>`;
+  }
+});
+const cerrar = document.getElementById('close');
+cerrar.addEventListener('click', () => {
+  document.getElementById('mi-modal').classList.add('hide');
+});
+// let modal =document.getElementById('mi-modal');
