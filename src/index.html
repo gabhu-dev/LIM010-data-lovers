@@ -40,10 +40,14 @@
     <main>
         <div id="pantalla-bienvenida" class="bienvenida hide">
             <section id="vista-dos" class="pantalla vista-dos flex">
-                <div class="caja-informacion flex">
-                    <h2>Información sobre el juego</h2>
-                    <p> League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con
-                        un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego.</p>
+                <div class="parent">
+                    <div class="caja-informacion children">
+                        <div class="sub-informacion">
+                            <h2>Información sobre el juego</h2>
+                            <p> League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada
+                                uno con un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego.</p>
+                        </div>
+                    </div>
                 </div>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/KpxjwIaW0EM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </section>
@@ -59,23 +63,23 @@
                     <label class="menu-a" for="check">|||</label>
                     <div class="left-panel">
                         <select id="tagk" class="orden">
-  <option value disabled selected>TIPO</option>
-  <option value="Assassin">Assassin</option>
-  <option value="Fighter">Fighter</option>
-  <option value="Mage">Mage</option>
-  <option value="Marksman">Marksman</option>
-  <option value="Support">Support</option>
-  <option value="Tank">Tank</option>
-</select>
+                        <option value disabled selected>TIPO</option>
+                        <option value="Assassin">Assassin</option>
+                        <option value="Fighter">Fighter</option>
+                        <option value="Mage">Mage</option>
+                        <option value="Marksman">Marksman</option>
+                        <option value="Support">Support</option>
+                        <option value="Tank">Tank</option>
+                    </select>
                         <select class="orden" id="orden-alfabetico">
   <option value disabled selected>ATAQUE</option>         
   <option value="0">Asc</option>
   <option value="1">Desc</option>
 </select>
                         <select class="orden" id="az">
-  <option value disabled selected>ORDEN</option>
-  <option value="0">A-Z</option>
-  <option value="1">Z-A</option>
+<option value disabled selected>ORDEN</option>
+<option value="0">A-Z</option>
+<option value="1">Z-A</option>
 
 </select>
 
@@ -94,9 +98,7 @@
             <div id="info-de-lol" class="info"></div>
         </div>
     </div>
-    <!--<div class="tooltip" id="tooltip">
-        <span class="tooltiptext" id="tooltiptext"></span>
-    </div>-->
+
 
 
 

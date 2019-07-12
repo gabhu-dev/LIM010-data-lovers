@@ -13,6 +13,18 @@
         display: flex;
     }
     
+    .parent {
+        background-image: url(img/marco.png);
+        background-repeat: no-repeat;
+        background-size: 770px 302px;
+        background-position: center;
+        margin: 2em;
+    }
+    
+    .children {
+        /* left: 40px; */
+    }
+    
     .pantalla {
         height: 100vh;
         background-size: cover;
@@ -87,13 +99,14 @@
         font-family: 'Cuprum', sans-serif;
         font-weight: bold;
     }
-    p1{
+    
+    p1 {
         padding-top: 10px;
         color: #ddc68e;
     }
-    p2{
+    
+    p2 {
         color: #ddc68e;
-        
     }
     /*------------------------------------------------------*/
     /*PANTALLA 2*/
@@ -119,30 +132,34 @@
         font-family: 'EB Garamond', serif;
         font-weight: bold;
     }
-    h2{
+    
+    .sub-informacion h2 {
         color: white;
         font-size: 20px;
-        padding:15px;
+        padding: 15px;
     }
-    p{
-    font-size: 18px;
-    margin-right: 15px;
-    margin-left: 25pxpx;
-    }
-    .caja-informacion {
-      
-        background-color: #1e374a8f;
-        background-size: cover;
-        background-repeat: no-repeat;
-        flex-direction: column;
-        color: #3695ba;
-        width: 750px;
-        height: 155px;
-        padding: 20px;
-        /* font-size: 20px; */
-        border: 5px solid black;
     
-        
+    .sub-informacion p {
+        font-size: 18px;
+        margin-right: 15px;
+        margin-left: 25px;
+    }
+    
+    .caja-informacion {
+        width: 750px;
+        height: 285px;
+        justify-content: center;
+        align-items: center;
+        /* padding: 20px;*/
+    }
+    
+    .sub-informacion {
+        /* width: 40em; */
+        /* height: 11em; */
+        padding: 27px;
+        margin: 14px;
+        background-color: grey;
+        flex-direction: column;
     }
     
     .menu {
@@ -334,9 +351,8 @@
     
     .modal {
         position: fixed;
-    
         z-index: 1;
-        padding-top:100px;
+        padding-top: 100px;
         left: 0;
         top: 0;
         width: 100%;
@@ -344,29 +360,47 @@
         overflow: auto;
         background-color: rgba(36, 39, 24, 0.6);
     }
-    .su-id{
-    color:orange;
-    font-size:60px;
-
+    
+    .info-descripcion {
+        flex-direction: row;
     }
-    .su-titulo{
-        color:white;
-        font-size: 40px;
+    
+    .contenido-modal {
+        flex-direction: column;
     }
+    
     .imgModal {
         width: 20em;
         height: 200px;
     }
-    .su-info{
+    
+    .su-id {
+        color: orange;
+        font-size: 60px;
+    }
+    
+    .su-descripcion {
         color: white;
         font-size: 20px;
-        
-        
     }
-    .su-descripcion{
-        color:white;
-        font-size: 30px;
+    
+    .su-titulo {
+        color: white;
+        font-size: 20px;
+        width: 152px;
     }
+    
+    .infor-macion {
+        flex-direction: column;
+        height: 120px;
+        width: 50px;
+    }
+    
+    .su-info {
+        color: white;
+        font-size: 15px;
+    }
+    
     .info {
         height: 80%;
         width: 80%;
@@ -377,7 +411,7 @@
     /* Modal Content/Box */
     
     .modal-content {
-        background-color:black;
+        background-color: black;
         margin: auto;
         padding: 20px;
         width: 70%;
