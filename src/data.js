@@ -6,34 +6,18 @@ const mostrarCampeones = (data) => {
     let textC = '';
     for (let i = 0; i < data.length; i++) {
         const mostrar = `
-        <div class = personajes-flex name='jalar'id=${data[i].id}>
-        <img  class = "img"src='${data[i].splash}'/>
-        <p class="decorado">${data[i].name}</p>
-        <p class="decorado">${data[i].title}</p>
-        </div>`;
+      <div class = personajes-flex name='jalar'id=${data[i].id}>
+      <img  class = "img"src='${data[i].splash}'/>
+      <p class="decorado">${data[i].name}</p>
+      <p class="decorado">${data[i].title}</p>
+      </div>`;
         textC += mostrar;
     }
     return textC;
 
 };
-// recorrer toda la informacion,blurd
-/*const runInfoBlurd = (data) => {
-    let textD = '';
-    for (let i = 0; i < data.length; i++) {
-        const mostrar = `
-     <div class = caracteristicas>
-     <img  class = "imagen"src='${data[i].splash}'/>
-     <p class="decorade">${data[i].name}</p>
-     <p class="decorade">${data[i].title}</p>
-     <p class="info">${data[i].blurb}</p>
-     <p class="descripcion">${data[i].info}</p>
-     </div>`;
-        textD += mostrar;
-    }
-    return textD;
-};
 
-window.runInfoBlurd = runInfoBlurd;*/
+window.runInfoBlurd = runInfoBlurd;
 
 // filtra solo imagen,titulo y nombre segun la condicion
 // la condicion es el tipo que selecciona el usuario
