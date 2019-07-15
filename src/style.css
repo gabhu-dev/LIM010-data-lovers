@@ -3,8 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
 /*RECICLANDO */
 
 .hide {
@@ -14,27 +12,11 @@
 .flex {
     display: flex;
 }
-
-.parent {
-    background-image: url(img/marco.jpeg);
-    background-repeat: no-repeat;
-    background-size: 770px 302px;
-    background-position: center;
-    margin: 2em;
-}
-
-
-/*.children {
-    /* left: 40px; 
-}*/
-
 .pantalla {
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-
 /*--------------------------------------------------/
 /PANTALLA 1*/
 
@@ -52,7 +34,9 @@
     flex-direction: column;
     justify-content: space-around;
 }
-
+.campeones{
+    text-align: center;
+}
 .logo {
     background-repeat: no-repeat;
     background-image: url(img/icono.png);
@@ -113,21 +97,18 @@ p1 {
 p2 {
     color: #ddc68e;
 }
-
-
 /*------------------------------------------------------/
 /PANTALLA 2*/
 
 .vista-dos {
-    align-items: center;
-    justify-content: center;
+    display: flex;
     flex-direction: column;
     background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d3/97/fa/d397faf0fec8ddd29c45bf847cbb7c41.gif);
 }
 
 .flexi-campeones {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     background-attachment: fixed;
     z-index: 1;
     background-image: url(img/fondo1.jpg);
@@ -138,11 +119,6 @@ p2 {
     border: none;
     font-family: 'EB Garamond', serif;
     font-weight: bold;
-    padding: 20px;
-    line-height: 20px;
-    text-align: center;
-    display: block;
-    position: relative;
     text-decoration: none;
 }
 
@@ -152,10 +128,6 @@ p2 {
     padding: 15px;
 }
 
-.btn {
-    display: table-cell;
-}
-
 .sub-informacion p {
     font-size: 18px;
     margin-right: 15px;
@@ -163,42 +135,50 @@ p2 {
 }
 
 .caja-informacion {
-    width: 750px;
-    height: 285px;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    height: 60%;
+justify-content: space-around;
+align-items:flex-end;
+   
+
+    /* padding: 20px;*/
 }
 
 .sub-informacion {
+    /* width: 40em; */
+    /* height: 11em; */
     padding: 27px;
     margin: 14px;
     background-color: grey;
     flex-direction: column;
 }
-
+.video{
+    height: 250px;
+    width: 435px;
+}
+.mensaje-x{
+    background-color: #2007078c;
+    height: 250px;
+    width: 500px;
+    font-size: 20px;
+    color: #F7F7F7;
+    padding: 2%;
+    font-family: 'Krub', sans-serif;
+}
 .menu {
     width: 100%;
     height: 50px;
-    overflow: hidden;
     background-color: black;
     border-top: 1px solid #7d6033;
     border-bottom: 1px solid #7d6033;
-    display: table;
-    position: relative;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav ul li {
+    text-decoration: none;
     list-style: none;
 }
-
-nav>ul>li:hover>ul {
-    display: block;
-}
-
-.sub-menu-menu {
-    flex-direction: row;
-    justify-content: space-around;
-    /*position: absolute;*/
-}
-
-
 /*--------------------------------------------------/
 /PANTALLA 3*/
 
@@ -211,24 +191,30 @@ nav>ul>li:hover>ul {
     border: solid white;
     border-width: 0 0.1rem;
 }
-
-
 /* ESTILOS PARA IMAGENES*/
 
 .logo-lol {
     width: 100%;
     height: 100px;
     background-color: black;
-    background-image: url(img/logo-fondo.png);
+
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
-
-.campeones-flex {
-    width: 100%;
+img{
+    width: 30%;
+    height: 100px;
+    
 }
 
+.titulo{
+    color: #E3B656;
+    font-size: 40px;
+    padding: 30px;
+    margin-left: 250px ;
+    font-family:  'EB Garamond', serif;
+}
 .img {
     width: 180px;
     height: 180px;
@@ -244,52 +230,45 @@ nav>ul>li:hover>ul {
     width: 199px;
     height: 250px;
     padding: 5px;
-    margin: 1%;
+    margin: 2%;
     vertical-align: top;
-    border: 3px solid white;
-    background-color: dimgray;
+    border: 3px solid #E3B656;
+    background-color: unset;
 }
 
-.personajes-flex:hover {
-    color: yellow;
-}
-
-span {
-    position: absolute;
-    width: 120px;
-    height: 30px;
-}
-
-.padre {
-    text-align: center;
-}
-
-img {
-    size: 30px;
-}
 
 select option {
-    color: black;
+    color: #F7F7F7;
     text-decoration: none;
 }
 
 .orden {
     list-style: none;
-    font-size: 20px;
+    font-size: 1.5rem;
     text-align: center;
-    padding: 0 0.5rem;
-    margin: 1rem 0;
-    display: inline-block;
-    color: green;
-    background-color: yellow;
+    padding: 0;
+    margin: 1rem ;
+    border-image: linear-gradient(to bottom, #c3a758, #6b521e);
+    border-image-slice: 1;
+    background-color: #191c2180;
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
+    -webkit-appearance: none;
 }
 
 .orden:hover {
     color: white;
     border: solid white;
     border-width: 0 0.1rem;
+   
 }
-
+.filtrado-general{
+display: flex;
+flex-direction: row;
+height: max-content;
+width: max-content;
+align-self: center;
+}
 footer {
     height: 40px;
     background-color: black;
@@ -304,43 +283,31 @@ footer {
     .vista-login,
     .cuadro-login,
     .bienvenida,
-    .pantalla {
+    .pantalla
+    {
         height: 670px;
         width: 380px;
     }
+    
     .caja-login {
-        width: 335px;
         height: 210px;
-        flex-direction: column;
-    }
-    .cuadro-de-texto {
         width: 335px;
-        height: 45px;
-        padding: 14px;
-        border-radius: 5px;
-        border: none;
-        outline: none;
-        font-size: 30px;
     }
     .cuadro-boton {
         height: 84px;
         width: 335px;
-        align-items: center;
-        flex-direction: column;
     }
-    footer {
-        width: 390px;
+    footer{
+        width:390px;
         height: 80px
     }
-    .nav,
-    .logo-lol {
+    .nav, .logo-lol{
         width: 100%;
     }
-    .left-panel {
+    .left-panel{
         width: 40%;
         height: 100%;
-    }
-    .menu-a {
+    }.menu-a{
         left: 20px;
         position: fixed
     }
@@ -349,29 +316,22 @@ footer {
         position: fixed;
     }
 }
-
-@media(min-width:260px) and (max-width:411px) {
-    .nav,
-    .logo-lol {
+@media(min-width:260px) and (max-width:411px){
+    .nav, .logo-lol{
         width: 400px;
     }
-    .pantalla {
+    .pantalla{
         height: 100%;
         width: 100%;
     }
-    .left-panel {
-        width: 40%;
-        height: 100%;
-        position: fixed;
-    }
-    .menu-a {
+    .menu-a{
         left: 20px
     }
     .checkbox:checked~.menu-a {
         left: 40%;
     }
+    
 }
-
 .modal {
     position: fixed;
     z-index: 1;
@@ -390,39 +350,33 @@ footer {
 
 .contenido-modal {
     flex-direction: column;
-    justify-content: space-around;
 }
 
 .imgModal {
     width: 20em;
     height: 200px;
-    border-radius: 20px;
 }
 
 .su-id {
     color: orange;
     font-size: 60px;
-    padding-left: 250px;
 }
 
 .su-descripcion {
     color: white;
-    font-size: 15px;
-    padding: 15px;
+    font-size: 20px;
 }
 
 .su-titulo {
     color: white;
     font-size: 20px;
-    width: 158px;
+    width: 152px;
 }
 
 .infor-macion {
     flex-direction: column;
     height: 120px;
     width: 50px;
-    padding-top: 90px;
-    padding-right: 100px;
 }
 
 .su-info {
@@ -437,8 +391,6 @@ footer {
     display: flex;
     flex-direction: column;
 }
-
-
 /* Modal Content/Box */
 
 .modal-content {
@@ -449,14 +401,12 @@ footer {
     height: 80%;
     border-radius: 40px;
 }
-
-
 /* The Close Button */
 
 .close {
     color: #aaa;
     /* float: right; */
-    margin-left: 23em;
+    margin-left: 31em;
     /* margin-right: 64px; */
     font-size: 28px;
     font-weight: bold;

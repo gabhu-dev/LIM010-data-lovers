@@ -6,99 +6,94 @@
     <title>League of Legends</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Cuprum|EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Krub&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <header class="logo-lol hide" id="cabecera"></header>
-    <nav class=" nav hide" id="barra">
-        <ul class="menu">
-            <li id="inicio" class="btn"><a href="#" class="btn-opciones">INICIO</a></li>
-            <li id="campeones" class="btn"><a href="#" class="btn-opciones">CAMPEONES</a>
-                <ul class="sub-menu hide">
-                    <div class="sub-menu-menu flex">
-                        <li> <select id="tipo" class="orden">
-                            <option value="0" disabled selected>TIPO</option>
-                            <option value="Assassin">Assassin</option>
-                            <option value="Fighter">Fighter</option>
-                            <option value="Mage">Mage</option>
-                            <option value="Marksman">Marksman</option>
-                            <option value="Support">Support</option>
-                            <option value="Tank">Tank</option>
-                          </select>
-                        </li>
-                        <li> <select class="orden " id="orden-ataque">
-                            <option value disabled selected>ATAQUE</option>         
-                            <option value="0">Asc</option>
-                            <option value="1">Desc</option>
-                          </select>
-                        </li>
-                        <li> <select class="orden" id="az">
-                            <option value disabled selected value="0">ORDEN</option>
-                            <option value="0">A-Z</option>
-                            <option value="1">Z-A</option>
-                          </select>
-                        </li>
-                    </div>
-                </ul>
-            </li>
-            <li class="btn">
-                <a href="https://universe.leagueoflegends.com/es_MX/regions/" class="btn-opciones">REGIONES</a></li>
-            <li class="btn">
-                <a href="https://universe.leagueoflegends.com/es_MX/comic/" class="btn-opciones">COMICS</a></li>
-        </ul>
-    </nav>
-    <section id="pantalla-login" class="login">
-        <div class="pantalla vista-login flex">
-            <div class="cuadro-login flex">
-                <header class="logo"></header>
-                <form id="caja-login" class="caja-login flex">
-                    <h2 class="texto">Usuario</h2>
-                    <input type="text" id="usuario" class="cuadro-de-texto">
-                    <h2 class="texto">Contraseña</h2>
-                    <input type="password" id="password" class="cuadro-de-texto">
-                    <p1><strong>Olvidaste tu contraseña?</strong></p1>
-                </form>
-                <p id="mensaje-error" class="texto"></p>
-                <div class="cuadro-boton flex">
-                    <button type="button" id="ingresar" class="button-pass">INGRESA</button>
-                    <p2>¿No tienes cuenta?<strong>REGISTRATE</strong></p2>
-                </div>
-            </div>
-        </div>
+<header class="logo-lol hide" id="cabecera"><img src="img/logo-fondo.png" alt=""><img src="https://thumbs.gfycat.com/AggressiveRadiantAkitainu-size_restricted.gif" alt=""></header>
+<nav class=" nav hide" id="barra">
+<ul class="menu flex">
+  <li id="inicio"><a href="#" class="btn-opciones">INICIO</a></li>
+  <li id="campeones" ><a href="#" class="btn-opciones">CAMPEONES</a></li>
+  <li class="btn-opciones"><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/regions/">REGIONES</a></li>
+  <li class="btn-opciones"><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/comic/">COMICS</a></li>
+  </ul>
+  </nav>
+<section id="pantalla-login" class="login">
+<div class="pantalla vista-login flex">
+<div class="cuadro-login flex">
+<header class="logo"></header>
+<form id="caja-login" class="caja-login flex">
+    <h2 class="texto">Usuario</h2>
+    <input type="text" id="usuario" class="cuadro-de-texto">
+    <h2 class="texto">Contraseña</h2>
+    <input type="password" id="password" class="cuadro-de-texto">
+    <p1><strong>Olvidaste tu contraseña?</strong></p1>
+    </form>
+    <p id="mensaje-error" class="texto"></p>
+    <div class="cuadro-boton flex">
+    <button type="button" id="ingresar" class="button-pass">INGRESA</button>
+     <p2>¿No tienes cuenta?<strong>REGISTRATE</strong></p2>
+     </div>
+     </div>
+     </div>
     </section>
     <main>
-        <div id="pantalla-bienvenida" class="bienvenida hide">
-            <section id="vista-dos" class="pantalla vista-dos flex">
-                <div class="caja-informacion flex">
-                    <h2 class="mensaje-x">Información sobre el juego</h2>
-                    <p class="mensaje-x"> League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con
-                        un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego.</p>
-                </div>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/KpxjwIaW0EM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </section>
-        </div>
 
-
-        <div id="pantalla-campeones" class="pantalla-campeones hide ">
-            <div class="flexi-campeones">
-
-                <section id="vista3" class="campeones-flex">
-                    <p id="contenido-campeones" class="padre"></p>
-                </section>
-            </div>
-        </div>
-    </main>
-    <!--creando modal-->
-    <div id="mi-modal" class="modal  hide">
-        <!--contenido del modal-->
-        <div class="modal-content">
-            <span id="close" class="close">&times;</span>
-            <div id="info-de-lol" class="info"></div>
-        </div>
+    <div id="pantalla-bienvenida" class="bienvenida hide">
+      <section id="vista-dos" class="pantalla vista-dos flex">
+      <h1 class="titulo flex">INFORMACION SOBRE EL JUEGO</h1>
+    <div class="caja-informacion flex">
+        <p class="mensaje-x">  League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con
+    un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego.</p>
+    
+    <iframe class="video" src="https://www.youtube.com/embed/KpxjwIaW0EM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+    </div>
+</section>
     </div>
 
-    <footer> ©2019 RiGa Games Inc.Todos los derechos reservados.RiGa Game,League of Legends es marca registrada</footer>
+  <div id="pantalla-campeones" class="pantalla-campeones hide ">
+  <div class="flexi-campeones">
+ <div class="filtrado-general">
+ <select id="tipo" class="orden">
+  <option value="0" disabled selected>TIPO</option>
+  <option value="Assassin">Assassin</option>
+  <option value="Fighter">Fighter</option>
+  <option value="Mage">Mage</option>
+  <option value="Marksman">Marksman</option>
+  <option value="Support">Support</option>
+  <option value="Tank">Tank</option>
+ </select>
+<select class="orden" id="orden-ataque">
+  <option value disabled selected value="0">ATAQUE</option>         
+  <option value="0">Asc</option>
+  <option value="1">Desc</option>
+</select>
+<select class="orden" id="az">
+  <option value disabled selected value="0">ORDEN</option>
+  <option value="0">A-Z</option>
+  <option value="1">Z-A</option>
+</select>
+</div>
+
+<section id="vista3" class="campeones">
+    <p>TEXTO PRUEBA</p>
+<p id="name" class="padre"></p>
+</section>
+</div>
+</div>
+</main>
+  <!--creo mi modal-->
+  <div id="mi-modal" class="modal  hide">
+  <!--modal content-->
+  <div class="modal-content">
+  <span id="close" class="close">&times;</span>
+  <div id="info-de-lol" class="info"></div>
+  </div>
+  </div>
+  
+    <footer> ©2019 RiGa Games Inc.Todos los derechos reservados.RiGa Game,League of Legends es una marca registrada</footer>
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
