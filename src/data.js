@@ -2,7 +2,7 @@
 
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
-const mostrarCampeones = (data) => {
+const showChampions = (data) => {
     let textC = '';
     for (let i = 0; i < data.length; i++) {
         const mostrar = `
@@ -17,18 +17,17 @@ const mostrarCampeones = (data) => {
 
 };
 
-window.runInfoBlurd = runInfoBlurd;
 
 // filtra solo imagen,titulo y nombre segun la condicion
 // la condicion es el tipo que selecciona el usuario
-const mostrarAsesinos = (data, condition) => {
+const showTypes = (data, condition) => {
     const mostrar = data.filter(caracter => (caracter.tags[0] === condition || caracter.tags[1] === condition));
     return mostrar;
 };
 
 
 // ordenando segun el orden alfabético
-const sortAtaque = (data, condition) => {
+const sortAlfa = (data, condition) => {
     const mostrarA = data.sort((a, b) => {
         // ordenando de menor a mayor
         if (a.name > b.name)
@@ -48,7 +47,7 @@ const sortAtaque = (data, condition) => {
 
     return 0;
 };
-const sortAlfa = (data, condition) => {
+const sortAtaque = (data, condition) => {
     const mostrarB = data.sort((a, b) => {
         // ordenando de menor a mayor
         if (a.stats.attackdamage > b.stats.attackdamage)
@@ -70,7 +69,7 @@ const sortAlfa = (data, condition) => {
 };
 
 
-window.mostrarCampeones = mostrarCampeones;
-window.mostrarAsesinos = mostrarAsesinos;
+window.showChampions = showChampions;
+window.showTypes = showTypes;
 window.sortAtaque = sortAtaque;
 window.sortAlfa = sortAlfa;
