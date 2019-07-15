@@ -1,118 +1,117 @@
 // DATOS
-const contrasena = document.getElementById('password');
-const usuario = document.getElementById('usuario');
+const secretWord = document.getElementById('password');
+const user = document.getElementById('usuario');
 // BOTONES
-const empezar = document.getElementById('ingresar');
-const campeones = document.getElementById('campeones');
-const begin = document.getElementById('inicio');
-const descripcion = document.getElementById('name');
+const start = document.getElementById('ingresar');
+const champions = document.getElementById('campeones');
+const comeBack = document.getElementById('inicio');
+const content = document.getElementById('contenido-campeones');
 // VISTAS
-const vistaLogin = document.getElementById('pantalla-login');
-const vistaBienvenida = document.getElementById('pantalla-bienvenida');
-const vistaCampeones = document.getElementById('pantalla-campeones');
+const viewLogin = document.getElementById('pantalla-login');
+const viewWelcome = document.getElementById('pantalla-bienvenida');
+const viewChampions = document.getElementById('pantalla-campeones');
 
 // CONTROLANDO HEADER
-const cabecera = document.getElementById('cabecera');
-const barraNavegacion = document.getElementById('barra');
+const head = document.getElementById('cabecera');
+const nav = document.getElementById('barra');
+
+//CONVIRTIENDO LA DATA --->ARRAY
+let arrayLOL = Object.values(LOL.data);
 
 // Contador de intentos en login
 let password = 0;
-let arrayLOL = Object.values(LOL.data);
-
-// Funciones
-empezar.addEventListener('click', () => {
-  const datos = contrasena.value;
-  const datosUsuario = usuario.value;
-  if (password < 2) {
-    if (datos === '' && datosUsuario === '') {
-      vistaLogin.classList.add('hide');
-      vistaBienvenida.classList.remove('hide');
-      cabecera.classList.remove('hide');
-      barraNavegacion.classList.remove('hide');
-    } else {
-      document.getElementById('mensajeError').innerHTML = '*Datos Incorrectos*';
-      password++;
+//1.Evento del primer boton---INGRESAR------------
+start.addEventListener('click', () => {
+    const data = secretWord.value;
+    const dataUser = user.value;
+    if (password < 2) {
+        if (data === '' && dataUser === '') {
+            viewLogin.classList.add('hide');
+            viewWelcome.classList.remove('hide');
+            head.classList.remove('hide');
+            nav.classList.remove('hide');
+        } else {
+            document.getElementById('mensajeError').innerHTML = '*Datos Incorrectos*';
+            password++;
+        }
     }
-  }
 });
-
-begin.addEventListener('click', ()=>{
-  vistaCampeones.classList.add('hide'); 
-  vistaBienvenida.classList.remove('hide');   
+//Evento del boton de -----INICIO---ubicado en el menú-----
+comeBack.addEventListener('click', () => {
+    viewChampions.classList.add('hide');
+    viewWelcome.classList.remove('hide');
 });
-campeones.addEventListener('click', () => {
-  let array = '';
-  array = mostrarCampeones(arrayLOL);
-  document.getElementById('name').innerHTML = array;
-  vistaBienvenida.classList.add('hide');
-  vistaCampeones.classList.remove('hide');
+//Evento del boton de -----CAMPEONES----Ubicado en el menú-----
+champions.addEventListener('click', () => {
+    let array = '';
+    array = showChampions(arrayLOL);
+    content.innerHTML = array;
+    viewWelcome.classList.add('hide');
+    viewChampions.classList.remove('hide');
 });
-tagk.addEventListener('change', () => {
-  const agarre = document.getElementById('tagk').value;
-  let vacio = '';
-  let array1 = [];
-  array1 = mostrarAsesinos(arrayLOL, agarre);
-  vacio = mostrarCampeones(array1);
-  document.getElementById('name').innerHTML = vacio;
+//Evento del select ---TIPO----ubicado en el aside----
+tipo.addEventListener('change', () => {
+    const captureType = document.getElementById('tipo').value;
+    let empty = '';
+    let array1 = [];
+    array1 = showTypes(arrayLOL, captureType);
+    empty = showChampion(array1);
+    content.innerHTML = empty;
 });
-
+//ordena en orden alfabetico
 const az = document.getElementById('az');
 az.addEventListener('change', () => {
-  let capturarAlfa = document.getElementById('tagk').value;
-  if (capturarAlfa === '0') {
-    let array3 = sortAlfa(arrayLOL, az.value);
-    document.getElementById('name').innerHTML = mostrarCampeones(array3);
-  } else {
-    const ar = mostrarAsesinos(arrayLOL, capturarAlfa);
-    let array2 = sortAlfa(ar, az.value);
-    document.getElementById('name').innerHTML = mostrarCampeones(array2);
-  } 
+    let captureAlfabeth = document.getElementById('tipo').value;
+    if (captureAlfabeth === '0') {
+        let array1 = sortAlfa(arrayLOL, az.value);
+        content.innerHTML = showChampions(array1);
+    } else {
+        const array2 = showTypes(arrayLOL, captureAlfabeth);
+        let array3 = sortAlfa(array2, az.value);
+        content.innerHTML = showChampions(array3);
+    }
 });
-// orden de ataque
+// orden de ataque segun daño de ataque
 const orden = document.getElementById('orden-ataque');
 orden.addEventListener('change', () => {
-  let capturar = document.getElementById('tagk').value;  
-  if (capturar === '0') {
-    let array3 = sortAtaque(arrayLOL, orden.value);
-    document.getElementById('name').innerHTML = mostrarCampeones(array3);
-  } else {
-    const ar = mostrarAsesinos(arrayLOL, capturar);
-    let array2 = sortAtaque(ar, orden.value);
-    document.getElementById('name').innerHTML = mostrarCampeones(array2);
-  } 
+    let capture = document.getElementById('tipo').value;
+    if (capture === '0') {
+        let array1 = sortAtaque(arrayLOL, orden.value);
+        content.innerHTML = showChampions(array1);
+    } else {
+        const array2 = showTypes(arrayLOL, capture);
+        let array3 = sortAtaque(array2, orden.value);
+        content.innerHTML = showChampions(array3);
+    }
 });
-// para ver las obtener las imagenes
-descripcion.addEventListener('click', () => {
-  const campeon = event.target.parentElement.id;
-  console.log(campeon);
-  const lolcito = arrayLOL.map(function(x) {
-    return x.id; 
-  }).indexOf(campeon);
-  console.log(lolcito);
-  if (event.target.parentElement.getAttribute('name') === 'jalar') {
-  // mostramnos modal
-    document.getElementById('mi-modal').classList.remove('hide');
-    // insertamos caracteristicas en el modal
-    document.getElementById('info-de-lol').innerHTML = `
+// evento para el modal
+content.addEventListener('click', () => {
+    const champion = event.target.parentElement.id;
+    const position = arrayLOL.map(x => x.id).indexOf(champion);
+    if (event.target.parentElement.getAttribute('name') === 'jalar') {
+        // abriendo modal
+        document.getElementById('mi-modal').classList.remove('hide');
+        // poniendo informacion en el modal
+        document.getElementById('info-de-lol').innerHTML = `
      <div class="info-descripcion flex">
      <div class="contenido-modal flex">
-     <p class="su-id">${arrayLOL[lolcito].id}</p>
-      <img  class = "imgModal"src="${arrayLOL[lolcito].splash}"/> 
-      <p class="su-descripcion">${arrayLOL[lolcito].blurb}</p>
+     <p class="su-id">${arrayLOL[position].id}</p>
+      <img  class = "imgModal"src="${arrayLOL[position].splash}"/> 
+      <p class="su-descripcion">${arrayLOL[position].blurb}</p>
       </div>
       <div class="infor-macion flex">
-      <p class="su-titulo">${arrayLOL[lolcito].title}</p>
-      <p class="su-info">ataque:${arrayLOL[lolcito].info.attack}</p>
-      <p class="su-info">defensa:${arrayLOL[lolcito].info.defense}</p>
-      <p class="su-info">magic:${arrayLOL[lolcito].info.magic}</p>
-      <p class="su-info">dificultad:${arrayLOL[lolcito].info.difficulty}</p>
+      <p class="su-titulo">${arrayLOL[position].title}</p>
+      <p class="su-info">ataque:${arrayLOL[position].info.attack}</p>
+      <p class="su-info">defensa:${arrayLOL[position].info.defense}</p>
+      <p class="su-info">magic:${arrayLOL[position].info.magic}</p>
+      <p class="su-info">dificultad:${arrayLOL[position].info.difficulty}</p>
     
       <div>
       </div>`;
-  }
+    }
 });
-const cerrar = document.getElementById('close');
-cerrar.addEventListener('click', () => {
-  document.getElementById('mi-modal').classList.add('hide');
+//evento para el "X" en el modal
+const close = document.getElementById('close');
+close.addEventListener('click', () => {
+    document.getElementById('mi-modal').classList.add('hide');
 });
-// let modal =document.getElementById('mi-modal');
