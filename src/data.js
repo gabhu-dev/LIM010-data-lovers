@@ -5,67 +5,73 @@
 const mostrarCampeones = (data) => {
     let textC = '';
     for (let i = 0; i < data.length; i++) {
-      const mostrar = `
+        const mostrar = `
         <div class = personajes-flex name='jalar'id=${data[i].id}>
         <img  class = "img"src='${data[i].splash}'/>
         <p class="decorado">${data[i].name}</p>
         <p class="decorado">${data[i].title}</p>
         </div>`;
-      textC += mostrar;
+        textC += mostrar;
     }
     return textC;
-  
-  };
-  // filtra solo imagen,titulo y nombre segun la condicion
-  // la condicion es el tipo que selecciona el usuario
-  const mostrarAsesinos = (data, condition) => {
+
+};
+// filtra solo imagen,titulo y nombre segun la condicion
+// la condicion es el tipo que selecciona el usuario
+const mostrarAsesinos = (data, condition) => {
     const mostrar = data.filter(caracter => (caracter.tags[0] === condition || caracter.tags[1] === condition));
     return mostrar;
-  };
-  
-  // ordenando segun el orden alfabético
-  const sortAlfa = (data, condition)=> {
+};
+let suma = (data, condition) => {
+    const arrSum = data.reduce((acumulador, siguiente) => {
+        acumulador.stats.attackdamage + siguiente.stats.attackdamage
+    });
+    return arrSum;
+};
+window.suma = suma;
+// ordenando segun el orden alfabético
+const sortAlfa = (data, condition) => {
     const mostrarA = data.sort((ab, bc) => {
-      // ordenando de menor a mayor
-      if (ab.name > bc.name) {
-        return 1;
-      }
-      if (ab.name < bc.name) {
-        return -1;
-      }
-      // a must be equal to b
-      return 0;
-    });    
+        // ordenando de menor a mayor
+        if (ab.name > bc.name) {
+            return 1;
+        }
+        if (ab.name < bc.name) {
+            return -1;
+        }
+        // a must be equal to b
+        return 0;
+    });
     if (condition === '0') {
-      return mostrarA;
+        return mostrarA;
     }
     if (condition === '1') {
-      return mostrarA.reverse();
+        return mostrarA.reverse();
     }
     return 0;
-  };
-  const sortAtaque = (data, condition)=> {
+};
+const sortAtaque = (data, condition) => {
     const mostrarB = data.sort((ab, bc) => {
-      // ordenando de menor a mayor
-      if (ab.stats.attackdamage > bc.stats.attackdamage) {
-        return 1;
-      }
-      if (ab.stats.attackdamage < bc.stats.attackdamage) {
-        return -1;
-      }
-      // a must be equal to b
-      return 0;
-    });    
+        // ordenando de menor a mayor
+        if (ab.stats.attackdamage > bc.stats.attackdamage) {
+            return 1;
+        }
+        if (ab.stats.attackdamage < bc.stats.attackdamage) {
+            return -1;
+        }
+        // a must be equal to b
+        return 0;
+    });
     if (condition === '0') {
-      return mostrarB;
+        return mostrarB;
     }
     if (condition === '1') {
-      return mostrarB.reverse();
+        return mostrarB.reverse();
     }
     return 0;
-  };
-  
-  window.mostrarCampeones = mostrarCampeones;
-  window.mostrarAsesinos = mostrarAsesinos;
-  window.sortAtaque = sortAtaque;
-  window.sortAlfa = sortAlfa;
+};
+
+window.mostrarCampeones = mostrarCampeones;
+window.mostrarAsesinos = mostrarAsesinos;
+window.sortAtaque = sortAtaque;
+window.sortAlfa = sortAlfa;
