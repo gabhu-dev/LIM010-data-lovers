@@ -47,12 +47,10 @@ const mostrarCampeones = (data) => {
       <div class="personajes-flex" name="jalar" id="${data[i].id}">
         <img class="img" src='${data[i].splash}'/>
         <p class="decorado">${data[i].name}</p>
-        <p class="decorado">${data[i].title}</p>
       </div>`;
     textC += mostrar;
   }
   return textC;
-
 };
 campeones.addEventListener('click', () => {
   let array = '';
@@ -101,9 +99,7 @@ orden.addEventListener('change', () => {
 descripcion.addEventListener('click', () => {
   const campeon = event.target.parentElement.id;
   console.log(campeon);
-  const lolcito = arrayLOL.map(function(x) {
-    return x.id; 
-  }).indexOf(campeon);
+  const lolcito = arrayLOL.map(x=> x.id).indexOf(campeon); 
   console.log(lolcito);
   if (event.target.parentElement.getAttribute('name') === 'jalar') {
   // mostramnos modal
@@ -118,10 +114,10 @@ descripcion.addEventListener('click', () => {
       </div>
       <div class="infor-macion flex">
       <p class="su-titulo">${arrayLOL[lolcito].title}</p>
-      <p class="su-info">ataque:${arrayLOL[lolcito].info.attack}</p>
-      <p class="su-info">defensa:${arrayLOL[lolcito].info.defense}</p>
-      <p class="su-info">magic:${arrayLOL[lolcito].info.magic}</p>
-      <p class="su-info">dificultad:${arrayLOL[lolcito].info.difficulty}</p>
+      <p class="su-info"> Ataque: ${arrayLOL[lolcito].info.attack}</p>
+      <p class="su-info"> Defensa:${arrayLOL[lolcito].info.defense}</p>
+      <p class="su-info"> Magia:${arrayLOL[lolcito].info.magic}</p>
+      <p class="su-info"> Dificultad:${arrayLOL[lolcito].info.difficulty}</p>
     
       <div>
       </div>`;

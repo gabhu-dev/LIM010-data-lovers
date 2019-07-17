@@ -1,5 +1,8 @@
 /* Manejo de data */
-
+const example = ()=>{
+  return 'example';
+};
+window.example = example;
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
 
@@ -12,12 +15,12 @@ const mostrarAsesinos = (data, condition) => {
 
 // ordenando segun el orden alfabético
 const sortAlfa = (data, condition)=> {
-  const mostrarA = data.sort((ab, bc) => {
+  const mostrarA = data.sort((ab, cd) => {
     // ordenando de menor a mayor
-    if (ab.name > bc.name) {
+    if (ab.name > cd.name) {
       return 1;
     }
-    if (ab.name < bc.name) {
+    if (ab.name < cd.name) {
       return -1;
     }
     // a must be equal to b
@@ -32,12 +35,12 @@ const sortAlfa = (data, condition)=> {
   return 0;
 };
 const sortAtaque = (data, condition)=> {
-  const mostrarB = data.sort((ab, bc) => {
+  const mostrarB = data.sort((ab, cd) => {
     // ordenando de menor a mayor
-    if (ab.stats.attackdamage > bc.stats.attackdamage) {
+    if (ab.stats.attackdamage > cd.stats.attackdamage) {
       return 1;
     }
-    if (ab.stats.attackdamage < bc.stats.attackdamage) {
+    if (ab.stats.attackdamage < cd.stats.attackdamage) {
       return -1;
     }
     // a must be equal to b
@@ -53,8 +56,8 @@ const sortAtaque = (data, condition)=> {
 };
 const suma = (data) => {
   const extrayendo = data.map(tipo=>tipo.stats.attackdamage);
-  const suma = extrayendo.reduce((previous,current)=>current+=previous);
-  const promedio = suma /extrayendo.length;
+  const suma = extrayendo.reduce((previous, current)=>current += previous);
+  const promedio = suma / extrayendo.length;
   return promedio;
 };
 window.suma = suma;

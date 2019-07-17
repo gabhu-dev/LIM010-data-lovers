@@ -5,13 +5,12 @@
     <meta charset="utf-8">
     <title>League of Legends</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Cuprum|EB+Garamond&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Krub&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum|EB+Garamond|Krub|Literata&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-<header class="logo-lol hide" id="cabecera"><img class="img-header"src="img/logo-fondo.png"><img class ="img-header"src="img/Gif.gif"></header>
+<header class="logo-lol hide" id="cabecera"> <img class="img-header" src="img/logo-fondo.png" alt="Imagen-lol"> <img class ="img-header" src="img/Gif.gif" alt="gif-lol"> </header>
 <nav class=" nav hide" id="nav">
 <ul class="menu flex">
   <li id="inicio"><a href="#" class="btn-opciones">INICIO</a></li>
@@ -29,23 +28,23 @@
     <input type="text" id="usuario" class="cuadro-de-texto">
     <h2 class="texto">Contraseña</h2>
     <input type="password" id="password" class="cuadro-de-texto">
-    <p1><strong>Olvidaste tu contraseña?</strong></p1>
+    <h2 id="olvidaste"><strong>¿Olvidaste tu contraseña?</strong></h2>
     </form>
     <p id="mensaje-error" class="texto"></p>
     <div class="cuadro-boton flex">
     <button type="button" id="ingresar" class="button-pass">INGRESA</button>
-     <p2>¿No tienes cuenta?<strong>REGISTRATE</strong></p2>
+     <h2>¿No tienes cuenta?<strong>REGISTRATE</strong></h2>
      </div>
      </div>
      </div>
-    </section>
-    <main>
+     </section>
+     <main>
 
-    <div id="pantalla-bienvenida" class="bienvenida hide">
-      <section id="vista-dos" class="pantalla vista-dos flex">
-      <h1 class="titulo flex">INFORMACION SOBRE EL JUEGO</h1>
+<div id="pantalla-bienvenida" class="bienvenida hide">
+    <section id="vista-dos" class="pantalla vista-dos flex">
+    <h1 class="titulo flex">INFORMACION SOBRE EL JUEGO</h1>
     <div class="informacion flex">
-        <p class="mensaje-x">  League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con
+    <p class="mensaje-x">  League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con
     un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego.</p>
     
     <iframe class="video" src="https://www.youtube.com/embed/KpxjwIaW0EM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
@@ -67,8 +66,8 @@
  </select>
 <select class="orden" id="orden-ataque">
   <option  value="0">PODER</option>         
-  <option value="0"> </option>
-  <option value="1"> </option>
+  <option value="0">Mayor </option>
+  <option value="1">Menor</option>
 </select>
 <select class="orden" id="az">
   <option value="0">ORDEN</option>
