@@ -53,7 +53,7 @@
     margin-top: 30px;
 }
 
-.caja-login {
+.sub-cuadro-login {
     width: 335px;
     height: 210px;
     flex-direction: column;
@@ -115,8 +115,7 @@ p2 {
     background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d3/97/fa/d397faf0fec8ddd29c45bf847cbb7c41.gif);
 }
 
-.flexi-campeones {
-    display: flex;
+.contenedor-campeones {
     flex-direction: column;
     background-attachment: fixed;
     z-index: 1;
@@ -143,7 +142,7 @@ p2 {
     margin-left: 25px;
 }
 
-.caja-informacion {
+.informacion {
     width: 100%;
     height: 60%;
     justify-content: space-around;
@@ -209,14 +208,10 @@ p2 {
 
 .logo-lol {
     width: 100%;
-    height: 100px;
+    height: 120px;
     background-color: black;
-}
-
-img {
-    width: 25%;
-    height: 100px;
-    margin-left: 326px;
+    align-self: center;
+    flex-direction: row;
 }
 
 .titulo {
@@ -225,6 +220,13 @@ img {
     padding: 30px;
     margin-left: 250px;
     font-family: 'EB Garamond', serif;
+}
+
+.img-header {
+    margin-left: 200px;
+    width: 17%;
+    height: 118px;
+    margin-left: 349px;
 }
 
 .img {
@@ -265,6 +267,7 @@ select option {
     overflow: hidden;
     overflow: -moz-hidden-unscrollable;
     -webkit-appearance: none;
+    font-family: 'Cuprum', sans-serif;
 }
 
 .orden:hover {
@@ -346,6 +349,9 @@ footer {
     }
 }
 
+
+/*ESTILOS MODAL*/
+
 .modal {
     position: fixed;
     z-index: 1;
@@ -401,7 +407,6 @@ footer {
 .info {
     height: 80%;
     width: 80%;
-    /* position: relative; */
     display: flex;
     flex-direction: column;
 }

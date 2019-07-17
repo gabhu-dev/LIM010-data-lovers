@@ -11,20 +11,20 @@
 </head>
 
 <body>
-<header class="logo-lol hide" id="cabecera"><img src="img/logo-fondo.png" alt=""><img src="https://thumbs.gfycat.com/AggressiveRadiantAkitainu-size_restricted.gif" alt=""></header>
-<nav class=" nav hide" id="barra">
+<header class="logo-lol hide" id="cabecera"><img class="img-header"src="img/logo-fondo.png"><img class ="img-header"src="img/Gif.gif"></header>
+<nav class=" nav hide" id="nav">
 <ul class="menu flex">
   <li id="inicio"><a href="#" class="btn-opciones">INICIO</a></li>
   <li id="campeones" ><a href="#" class="btn-opciones">CAMPEONES</a></li>
-  <li class="btn-opciones"><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/regions/">REGIONES</a></li>
-  <li class="btn-opciones"><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/comic/">COMICS</a></li>
+  <li><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/regions/">REGIONES</a></li>
+  <li ><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/comic/">COMICS</a></li>
   </ul>
   </nav>
 <section id="pantalla-login" class="login">
 <div class="pantalla vista-login flex">
 <div class="cuadro-login flex">
 <header class="logo"></header>
-<form id="caja-login" class="caja-login flex">
+<form class="sub-cuadro-login">
     <h2 class="texto">Usuario</h2>
     <input type="text" id="usuario" class="cuadro-de-texto">
     <h2 class="texto">Contraseña</h2>
@@ -44,7 +44,7 @@
     <div id="pantalla-bienvenida" class="bienvenida hide">
       <section id="vista-dos" class="pantalla vista-dos flex">
       <h1 class="titulo flex">INFORMACION SOBRE EL JUEGO</h1>
-    <div class="caja-informacion flex">
+    <div class="informacion flex">
         <p class="mensaje-x">  League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con
     un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego.</p>
     
@@ -54,31 +54,32 @@
     </div>
 
   <div id="pantalla-campeones" class="pantalla-campeones hide ">
-  <div class="flexi-campeones">
+  <div class="contenedor-campeones flex">
  <div class="filtrado-general">
  <select id="tipo" class="orden">
-  <option value="0" disabled selected>TIPO</option>
-  <option value="Assassin">Assassin</option>
-  <option value="Fighter">Fighter</option>
-  <option value="Mage">Mage</option>
-  <option value="Marksman">Marksman</option>
-  <option value="Support">Support</option>
-  <option value="Tank">Tank</option>
+  <option value="0">TIPO</option>
+  <option value="Assassin">Asesinos</option>
+  <option value="Fighter">Luchadores</option>
+  <option value="Mage">Magos</option>
+  <option value="Marksman">Tiradores</option>
+  <option value="Support">Apoyo</option>
+  <option value="Tank">Tanques</option>
  </select>
 <select class="orden" id="orden-ataque">
-  <option value disabled selected value="0">ATAQUE</option>         
-  <option value="0">Asc</option>
-  <option value="1">Desc</option>
+  <option  value="0">PODER</option>         
+  <option value="0"> </option>
+  <option value="1"> </option>
 </select>
 <select class="orden" id="az">
-  <option value disabled selected value="0">ORDEN</option>
+  <option value="0">ORDEN</option>
   <option value="0">A-Z</option>
   <option value="1">Z-A</option>
 </select>
 </div>
 
 <section id="vista3" class="campeones">
-    <p>TEXTO PRUEBA</p>
+  <p id="promedio"></p>
+  <p id="total" class="total"></p>
 <p id="name" class="padre"></p>
 </section>
 </div>

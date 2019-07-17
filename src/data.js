@@ -2,33 +2,14 @@
 
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
-const mostrarCampeones = (data) => {
-    let textC = '';
-    for (let i = 0; i < data.length; i++) {
-        const mostrar = `
-        <div class = personajes-flex name='jalar'id=${data[i].id}>
-        <img  class = "img"src='${data[i].splash}'/>
-        <p class="decorado">${data[i].name}</p>
-        <p class="decorado">${data[i].title}</p>
-        </div>`;
-        textC += mostrar;
-    }
-    return textC;
 
-};
 // filtra solo imagen,titulo y nombre segun la condicion
 // la condicion es el tipo que selecciona el usuario
 const mostrarAsesinos = (data, condition) => {
     const mostrar = data.filter(caracter => (caracter.tags[0] === condition || caracter.tags[1] === condition));
     return mostrar;
 };
-let suma = (data, condition) => {
-    const arrSum = data.reduce((acumulador, siguiente) => {
-        acumulador.stats.attackdamage + siguiente.stats.attackdamage
-    });
-    return arrSum;
-};
-window.suma = suma;
+
 // ordenando segun el orden alfabético
 const sortAlfa = (data, condition) => {
     const mostrarA = data.sort((ab, bc) => {
@@ -70,8 +51,13 @@ const sortAtaque = (data, condition) => {
     }
     return 0;
 };
-
-window.mostrarCampeones = mostrarCampeones;
+const suma = (data) => {
+    const extrayendo = data.map(tipo => tipo.stats.attackdamage);
+    const suma = extrayendo.reduce((previous, current) => current += previous);
+    const promedio = suma / extrayendo.length;
+    return promedio;
+};
+window.suma = suma;
 window.mostrarAsesinos = mostrarAsesinos;
 window.sortAtaque = sortAtaque;
 window.sortAlfa = sortAlfa;

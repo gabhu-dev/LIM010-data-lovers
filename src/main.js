@@ -13,7 +13,7 @@ const vistaCampeones = document.getElementById('pantalla-campeones');
 
 // CONTROLANDO HEADER
 const cabecera = document.getElementById('cabecera');
-const barraNavegacion = document.getElementById('barra');
+const barraNavegacion = document.getElementById('nav');
 
 // Contador de intentos en login
 let password = 0;
@@ -40,12 +40,27 @@ begin.addEventListener('click', () => {
     vistaCampeones.classList.add('hide');
     vistaBienvenida.classList.remove('hide');
 });
+const mostrarCampeones = (data) => {
+    let textC = '';
+    for (let i = 0; i < data.length; i++) {
+        const mostrar = `
+      <div class="personajes-flex" name="jalar" id="${data[i].id}">
+        <img class="img" src='${data[i].splash}'/>
+        <p class="decorado">${data[i].name}</p>
+        <p class="decorado">${data[i].title}</p>
+      </div>`;
+        textC += mostrar;
+    }
+    return textC;
+
+};
 campeones.addEventListener('click', () => {
     let array = '';
     array = mostrarCampeones(arrayLOL);
     document.getElementById('name').innerHTML = array;
     vistaBienvenida.classList.add('hide');
     vistaCampeones.classList.remove('hide');
+    document.getElementById('promedio').innerHTML = '';
 });
 tipo.addEventListener('change', () => {
     const agarre = document.getElementById('tipo').value;
@@ -54,16 +69,9 @@ tipo.addEventListener('change', () => {
     array1 = mostrarAsesinos(arrayLOL, agarre);
     vacio = mostrarCampeones(array1);
     document.getElementById('name').innerHTML = vacio;
-
+    document.getElementById('promedio').innerHTML = suma(array1);
+    document.getElementById('total').innerHTML = array1.length;
 });
-
-const agarre = document.getElementById('tipo').value;
-let vacio_1 = '';
-let array2 = [];
-array2 = suma(arrayLOL, vacio_1);
-vacio_1 = mostrarCampeones(arrayLOL);
-document.getElementById('name').innerHTML = vacio_1;
-
 const az = document.getElementById('az');
 az.addEventListener('change', () => {
     let capturarAlfa = document.getElementById('tipo').value;
