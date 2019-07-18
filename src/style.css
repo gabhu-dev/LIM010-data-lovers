@@ -96,13 +96,18 @@
     font-weight: bold;
 }
 
-p1 {
+h1 {
     padding-top: 10px;
     color: #ddc68e;
 }
 
-p2 {
+h2 {
     color: #ddc68e;
+    font-size: 20px;
+}
+
+#olvidaste {
+    text-align: end;
 }
 
 
@@ -195,6 +200,8 @@ p2 {
 
 .decorado {
     color: aliceblue;
+    font-size: 30px;
+    font-family: 'Literata', serif;
 }
 
 .decorado:hover {
@@ -232,6 +239,7 @@ p2 {
 .img {
     width: 180px;
     height: 180px;
+    object-fit: cover;
 }
 
 .img:hover {
@@ -246,13 +254,7 @@ p2 {
     padding: 5px;
     margin: 2%;
     vertical-align: top;
-    border: 3px solid #E3B656;
-    background-color: unset;
-}
-
-select option {
-    color: #F7F7F7;
-    text-decoration: none;
+    background-color: #312b1fa8;
 }
 
 .orden {
@@ -261,17 +263,11 @@ select option {
     text-align: center;
     padding: 0;
     margin: 1rem;
-    border-image: linear-gradient(to bottom, #c3a758, #6b521e);
-    border-image-slice: 1;
-    background-color: #191c2180;
-    overflow: hidden;
-    overflow: -moz-hidden-unscrollable;
-    -webkit-appearance: none;
+    background-color: #e0dcdc99;
     font-family: 'Cuprum', sans-serif;
 }
 
 .orden:hover {
-    color: white;
     border: solid white;
     border-width: 0 0.1rem;
 }
@@ -417,7 +413,7 @@ footer {
 .modal-content {
     background-color: black;
     margin: auto;
-    padding: 20px;
+    padding: 0 0 0 20px;
     width: 70%;
     height: 80%;
     border-radius: 40px;
@@ -428,9 +424,8 @@ footer {
 
 .close {
     color: #aaa;
-    /* float: right; */
+    float: right;
     margin-left: 31em;
-    /* margin-right: 64px; */
     font-size: 28px;
     font-weight: bold;
 }

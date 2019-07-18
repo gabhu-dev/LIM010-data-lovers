@@ -12,49 +12,30 @@ const mostrarAsesinos = (data, condition) => {
 
 // ordenando segun el orden alfabético
 const sortAlfa = (data, condition) => {
-    const mostrarA = data.sort((ab, bc) => {
-        // ordenando de menor a mayor
-        if (ab.name > bc.name) {
-            return 1;
-        }
-        if (ab.name < bc.name) {
-            return -1;
-        }
-        // a must be equal to b
-        return 0;
-    });
+    const mostrarA = data.sort((ab, bc) => (ab.name > bc.name ? 1 : -1));
     if (condition === '0') {
         return mostrarA;
     }
     if (condition === '1') {
         return mostrarA.reverse();
     }
-    return 0;
 };
 const sortAtaque = (data, condition) => {
-    const mostrarB = data.sort((ab, bc) => {
-        // ordenando de menor a mayor
-        if (ab.stats.attackdamage > bc.stats.attackdamage) {
-            return 1;
-        }
-        if (ab.stats.attackdamage < bc.stats.attackdamage) {
-            return -1;
-        }
-        // a must be equal to b
-        return 0;
-    });
+    const mostrarB = data.sort((ab, cd) => (ab.stats.attackdamage > cd.stats.attackdamage ? 1 : -1));
+
     if (condition === '0') {
         return mostrarB;
-    }
-    if (condition === '1') {
+    } else if (condition === '1') {
         return mostrarB.reverse();
     }
-    return 0;
 };
 const suma = (data) => {
-    const extrayendo = data.map(tipo => tipo.stats.attackdamage);
+    const extrayendo = data.map(tipo => {
+        return tipo.stats.attackdamage;
+    });
     const suma = extrayendo.reduce((previous, current) => current += previous);
-    const promedio = suma / extrayendo.length;
+    const promedio = Math.round(suma / extrayendo.length);
+
     return promedio;
 };
 window.suma = suma;
