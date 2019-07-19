@@ -300,35 +300,42 @@ footer {
         height: 80px
     }
     .nav, .logo-lol{
-        width: 100%;
-    }
-    .left-panel{
-        width: 40%;
-        height: 100%;
-    }.menu-a{
-        left: 20px;
-        position: fixed
-    }
-    .checkbox:checked~.menu-a {
-        left: 50%;
-        position: fixed;
+        width: 400px;
     }
 }
 @media(min-width:260px) and (max-width:411px){
     .nav, .logo-lol{
-        width: 400px;
+        width: 410px;
     }
     .pantalla{
         height: 100%;
         width: 100%;
     }
-    .menu-a{
-        left: 20px
+    .titulo{
+        font-size:30px;
+        margin-left: 0px
     }
-    .checkbox:checked~.menu-a {
-        left: 40%;
+    .img-header{
+      display: flex;
+      margin-left: 130px;
+      width: 150px
     }
- 
+    .gif{
+        display:none;
+    }
+    .informacion{
+        display:block;
+    }
+    footer{
+        width:410px;
+        height: 80px
+    }
+    .mensaje-x{
+        width:80%;
+        font-size:20px;
+        padding:15px;
+        
+    }
 }
 
 /*ESTILOS MODAL*/

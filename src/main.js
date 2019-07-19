@@ -66,7 +66,7 @@ tipo.addEventListener('change', () => {
   let array1 = [];
   array1 = mostrarAsesinos(arrayLOL, agarre);
   vacio = mostrarCampeones(array1);
-  document.getElementById('name').innerHTML = vacio;
+  document.getElementById('contenido-personajes').innerHTML = vacio;
   document.getElementById('promedio').innerHTML = 'Promedio de campeones :' + ' ' + suma(array1);
   document.getElementById('total').innerHTML = 'Total de campeones:' + ' ' + array1.length;
 });
@@ -75,11 +75,11 @@ az.addEventListener('change', () => {
   let capturarAlfa = document.getElementById('tipo').value;
   if (capturarAlfa === '0') {
     let array3 = sortAlfa(arrayLOL, az.value);
-    document.getElementById('name').innerHTML = mostrarCampeones(array3);
+    document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array3);
   } else {
     const ar = mostrarAsesinos(arrayLOL, capturarAlfa);
     let array2 = sortAlfa(ar, az.value);
-    document.getElementById('name').innerHTML = mostrarCampeones(array2);
+    document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array2);
   } 
 });
 // orden de ataque
@@ -88,11 +88,11 @@ orden.addEventListener('change', () => {
   let capturar = document.getElementById('tipo').value;  
   if (capturar === '0') {
     let array3 = sortAtaque(arrayLOL, orden.value);
-    document.getElementById('name').innerHTML = mostrarCampeones(array3);
+    document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array3);
   } else {
     const ar = mostrarAsesinos(arrayLOL, capturar);
     let array2 = sortAtaque(ar, orden.value);
-    document.getElementById('name').innerHTML = mostrarCampeones(array2);
+    document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array2);
   } 
 });
 // para ver las obtener las imagenes
