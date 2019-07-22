@@ -22,14 +22,15 @@ const mostrarAsesinos = (data, condition) => {
     const mostrar = data.filter(caracter => (caracter.tags[0] === condition || caracter.tags[1] === condition));
     return mostrar;
 };
-let suma = (data, condition) => {
-    const arrSum = data.reduce((acumulador, siguiente) => {
-        acumulador.stats.attackdamage + siguiente.stats.attackdamage
-    });
-    return arrSum;
+ 
+const suma = (data) => {
+   const extrayendo=data.map(tipo=>tipo.stats.attackdamage);
+   const suma =extrayendo.reduce((previous,current)=>current+=previous);
+   const promedio=suma/extrayendo.length;
+   return promedio;
+
 };
 window.suma = suma;
-// ordenando segun el orden alfabético
 const sortAlfa = (data, condition) => {
     const mostrarA = data.sort((ab, bc) => {
         // ordenando de menor a mayor

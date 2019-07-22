@@ -46,16 +46,24 @@ campeones.addEventListener('click', () => {
     document.getElementById('name').innerHTML = array;
     vistaBienvenida.classList.add('hide');
     vistaCampeones.classList.remove('hide');
+    document.getElementById('promedio').innerHTML='';
+
 });
 tipo.addEventListener('change', () => {
     const agarre = document.getElementById('tipo').value;
+    const promedio=document.getElementById('promedio');
     let vacio = '';
     let array1 = [];
     array1 = mostrarAsesinos(arrayLOL, agarre);
     vacio = mostrarCampeones(array1);
     document.getElementById('name').innerHTML = vacio;
+    document.getElementById('promedio').innerHTML=suma(array1);
+    document.getElementById('total').innerHTML=array1.length;
 
 });
+
+
+
 
 const agarre = document.getElementById('tipo').value;
 let vacio_1 = '';
@@ -123,4 +131,3 @@ const cerrar = document.getElementById('close');
 cerrar.addEventListener('click', () => {
     document.getElementById('mi-modal').classList.add('hide');
 });
-// let modal =document.getElementById('mi-modal');
