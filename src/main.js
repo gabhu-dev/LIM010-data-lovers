@@ -70,7 +70,7 @@ tipo.addEventListener('change', () => {
   let array1 = [];
   array1 = mostrarAsesinos(arrayLOL, capturaSelect);
   vacio = mostrarCampeones(array1);
-  document.getElementById('contenido-personajes').innerHTML = vacio;
+  document.getElementById('contenido-personajes').innerHTML = vacio ;
   document.getElementById('promedio').innerHTML =
     'Promedio de campeones :' + ' ' + suma(array1);
   document.getElementById('total').innerHTML =
@@ -130,9 +130,7 @@ descripcion.addEventListener('click', () => {
       <p class="su-info"> Ataque:${arrayLOL[idCampeones].info.attack}</p>
       <p class="su-info"> Defensa:${arrayLOL[idCampeones].info.defense}</p>
       <p class="su-info"> Magia:${arrayLOL[idCampeones].info.magic}</p>
-      <p class="su-info"> Dificultad:${
-  arrayLOL[idCampeones].info.difficulty
-}</p>
+      <p class="su-info"> Dificultad:${arrayLOL[idCampeones].info.difficulty}</p>
     
       <div>
       </div>`;
