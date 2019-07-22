@@ -7,7 +7,7 @@
     "htmlhint": "htmlhint src/*.html test/*.html",
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
-    "test": "mocha"
+    "test": "jest --coverage"
   },
   "dependencies": {
     "chai": "^4.2.0",
@@ -15,5 +15,8 @@
     "eslint-plugin-jest": "^22.1.2",
     "htmlhint": "^0.10.1",
     "mocha": "^5.2.0"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
   }
 }
