@@ -24,7 +24,7 @@ empezar.addEventListener('click', () => {
   const datos = contrasena.value;
   const datosUsuario = usuario.value;
   if (password < 2) {
-    if (datos === '' && datosUsuario === '') {
+    if (datos === 'LABORATORIA' && datosUsuario === 'LABORATORIA') {
       vistaLogin.classList.add('hide');
       vistaBienvenida.classList.remove('hide');
       cabecera.classList.remove('hide');
