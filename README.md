@@ -12,7 +12,7 @@
 
 ## Indice
 
-League of Legends-Source es una aplicaión dirigida a aquellas usuarios nuevos en unos de los juegos **mmás famosos** en el mundo : **League of Legends**.
+League of Legends-Source es una aplicaión dirigida a aquellas usuarios nuevos en unos de los juegos **más famosos** en el mundo : **League of Legends**.
 
 En está aplicación podrá encontrar todos los personajes (Campeones) que incluye el juego, y filtrar a los que sean de su interés.
 
@@ -35,6 +35,36 @@ En este sprint avanzamos mucho y teniamos el 90% del proyecto hecho por lo tanto
 
 
 ## Prototipado en papel
+ Después de haber llegado a un acuerdo sobre el diseño de nuestra página web tuvimos los primeros bocetos en papel y concluimos que serían tres vistas.
+
+ - Pantalla de inicio de sesión y segunda pantalla :
+
+ <img src="./src/img/vista1.jpeg">
+ <img src="./src/img/vista2.jpeg">
+ 
+-  Pantalla de inicio de sesión y segunda pantalla en móvil:
+
+ <img src="./src/img/vistaunoydos.jpeg">
+
+- Tercera pantalla :
+
+<img src="./src/img/vista3.jpeg">
+
+- Tercera pantalla en móvil :
+
+<img src="./src/img/vistatres.jpeg">
+ 
+ ***
+
+ ## Resultado final:
+
+ Trabajamos con el CSS de acuerdo al tema elegido, asi como los contrastes necesarios de acuerdo al juego. 
+
+ <img src="./src/img/zeplin.jpg"> 
+
+- Link hacia zeplin para observar el prototipo completo.
+https://zpl.io/bz7wQrA  
+ 
 
 ### Creadoras
 - Rita Gómez

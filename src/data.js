@@ -3,7 +3,6 @@
 // esta es una función de ejemplo
 // puedes ver como agregamos la función a nuestro objeto global window
 
-// filtra solo imagen,titulo y nombre segun la condicion
 // la condicion es el tipo que selecciona el usuario
 const mostrarAsesinos = (data, condition) => {
     const mostrar = data.filter(caracter => (caracter.tags[0] === condition || caracter.tags[1] === condition));
@@ -20,6 +19,7 @@ const sortAlfa = (data, condition) => {
         return mostrarA.reverse();
     }
 };
+//Ordenando segun daño de ataque
 const sortAtaque = (data, condition) => {
     const mostrarB = data.sort((ab, cd) => (ab.stats.attackdamage > cd.stats.attackdamage ? 1 : -1));
 
@@ -29,6 +29,7 @@ const sortAtaque = (data, condition) => {
         return mostrarB.reverse();
     }
 };
+// suma y obtiene el promedio por medio de ataque
 const suma = (data) => {
     const extrayendo = data.map(tipo => {
         return tipo.stats.attackdamage;

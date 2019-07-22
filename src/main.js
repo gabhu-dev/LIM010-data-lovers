@@ -19,7 +19,7 @@ const barraNavegacion = document.getElementById('nav');
 let password = 0;
 let arrayLOL = Object.values(LOL.data);
 
-// Funciones
+// evento para el boton de ingresar
 empezar.addEventListener('click', () => {
     const datos = contrasena.value;
     const datosUsuario = usuario.value;
@@ -30,16 +30,17 @@ empezar.addEventListener('click', () => {
             cabecera.classList.remove('hide');
             barraNavegacion.classList.remove('hide');
         } else {
-            document.getElementById('mensajeError').innerHTML = '*Datos Incorrectos*';
+            document.getElementById('mensaje-error').innerHTML = '*Datos Incorrectos*';
             password++;
         }
     }
 });
-
+// regresa a la pantalla 2
 begin.addEventListener('click', () => {
     vistaCampeones.classList.add('hide');
     vistaBienvenida.classList.remove('hide');
 });
+// recorre la data
 const mostrarCampeones = (data) => {
     let textC = '';
     for (let i = 0; i < data.length; i++) {
@@ -52,6 +53,7 @@ const mostrarCampeones = (data) => {
     }
     return textC;
 };
+// llama a los campeones
 campeones.addEventListener('click', () => {
     let array = '';
     array = mostrarCampeones(arrayLOL);
@@ -60,59 +62,61 @@ campeones.addEventListener('click', () => {
     vistaCampeones.classList.remove('hide');
     document.getElementById('promedio').innerHTML = '';
 });
+// llama a los campeones por tipo,promedio,total
 tipo.addEventListener('change', () => {
     const agarre = document.getElementById('tipo').value;
     let vacio = '';
     let array1 = [];
     array1 = mostrarAsesinos(arrayLOL, agarre);
     vacio = mostrarCampeones(array1);
-    document.getElementById('name').innerHTML = vacio;
+    document.getElementById('contenido-personajes').innerHTML = vacio;
     document.getElementById('promedio').innerHTML = 'Promedio de campeones :' + ' ' + suma(array1);
     document.getElementById('total').innerHTML = 'Total de campeones:' + ' ' + array1.length;
 });
+// llama al orden alfabetico
 const az = document.getElementById('az');
 az.addEventListener('change', () => {
     let capturarAlfa = document.getElementById('tipo').value;
     if (capturarAlfa === '0') {
         let array3 = sortAlfa(arrayLOL, az.value);
-        document.getElementById('name').innerHTML = mostrarCampeones(array3);
+        document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array3);
     } else {
         const ar = mostrarAsesinos(arrayLOL, capturarAlfa);
         let array2 = sortAlfa(ar, az.value);
-        document.getElementById('name').innerHTML = mostrarCampeones(array2);
+        document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array2);
     }
 });
-// orden de ataque
+// llama por daño de ataque
 const orden = document.getElementById('orden-ataque');
 orden.addEventListener('change', () => {
     let capturar = document.getElementById('tipo').value;
     if (capturar === '0') {
         let array3 = sortAtaque(arrayLOL, orden.value);
-        document.getElementById('name').innerHTML = mostrarCampeones(array3);
+        document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array3);
     } else {
         const ar = mostrarAsesinos(arrayLOL, capturar);
         let array2 = sortAtaque(ar, orden.value);
-        document.getElementById('name').innerHTML = mostrarCampeones(array2);
+        document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array2);
     }
 });
-// para ver las obtener las imagenes
+// llama a mi modal
 descripcion.addEventListener('click', () => {
     const campeon = event.target.parentElement.id;
     const idCampeones = arrayLOL.map(x => x.id).indexOf(campeon);
     if (event.target.parentElement.getAttribute('name') === 'jalar') {
-        // mostramnos modal
+        // mostramos modal
         document.getElementById('mi-modal').classList.remove('hide');
         // insertamos caracteristicas en el modal
         document.getElementById('info-de-lol').innerHTML = `
      <div class="info-descripcion flex">
      <div class="contenido-modal flex">
      <p class="su-id">${arrayLOL[idCampeones].id}</p>
-      <img  class = "imgModal"src="${arrayLOL[idCampeones].splash}"/> 
+      <p class="su-titulo">${arrayLOL[idCampeones].title}</p>
+      <img  class = "modal-img"src="${arrayLOL[idCampeones].splash}"/> 
       <p class="su-descripcion">${arrayLOL[idCampeones].blurb}</p>
       </div>
       <div class="infor-macion flex">
-      <p class="su-titulo">${arrayLOL[idCampeones].title}</p>
-      <p class="su-info"> Ataque: ${arrayLOL[idCampeones].info.attack}</p>
+      <p class="su-info"> Ataque:${arrayLOL[idCampeones].info.attack}</p>
       <p class="su-info"> Defensa:${arrayLOL[idCampeones].info.defense}</p>
       <p class="su-info"> Magia:${arrayLOL[idCampeones].info.magic}</p>
       <p class="su-info"> Dificultad:${arrayLOL[idCampeones].info.difficulty}</p>
