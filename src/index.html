@@ -1,105 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>League of Legends</title>
+    <title>WikiLOL</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Cuprum|EB+Garamond|Krub|Literata&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/icono.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  </head>
 
-<body>
-<header class="logo-lol hide" id="cabecera"> <img class="img-header" src="img/logo-fondo.png" alt="Imagen-lol"> <img class ="img-header gif" src="img/Gif.gif" alt="gif-lol"> </header>
-<nav class=" nav hide" id="nav">
-<ul class="menu flex">
-  <li id="inicio"><a href="#" class="btn-opciones">INICIO</a></li>
-  <li id="campeones" ><a href="#" class="btn-opciones">CAMPEONES</a></li>
-  <li><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/regions/">REGIONES</a></li>
-  <li ><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/comic/">COMICS</a></li>
-  </ul>
-  </nav>
-  <main>
-<section id="pantalla-login">
-<div class="pantalla vista-login flex">
-  <div class="cuadro-login flex">
-    <header class="logo"></header>
-    <form class="sub-cuadro-login">
-        <h2 class="texto">Usuario</h2>
-        <input type="text" id="usuario" class="cuadro-de-texto">
-        <h2 class="texto">Contraseña</h2>
-        <input type="password" id="password" class="cuadro-de-texto">
-        <h2 id="olvidaste"><strong>¿Olvidaste tu contraseña?</strong></h2>
-    </form>
-        <p id="mensaje-error" class="texto"></p>
-        <div class="cuadro-boton flex">
-        <button type="button" id="ingresar" class="button-pass">INGRESA</button>
-        <h2>¿No tienes cuenta?<strong>REGISTRATE</strong></h2>
+  <body>
+    <header class="logo-lol hide" id="cabecera"> <img class="img-header" src="img/logo-fondo.png" alt="Imagen-lol">
+      <img class="img-dos" src="img/Gif.gif" alt="gif-lol"> </header>
+      <nav class="hide" id="nav">
+        <ul class="menu flex">
+      <li id="inicio"><a href="#" class="btn-opciones">INICIO</a></li>
+      <li id="campeones"><a href="#" class="btn-opciones">CAMPEONES</a></li>
+      <li><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/regions/">REGIONES</a></li>
+      <li><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/comic/">COMICS</a></li>
+    </ul>
+    </nav>
+    <main>
+      <section id="pantalla-login" class="login">
+        <div class="pantalla vista-login flex">
+          <div class="cuadro-login flex">
+            <header class="logo"></header>
+            <form class="sub-cuadro-login">
+              <h2 class="texto">Usuario</h2>
+              <input type="text" id="usuario" class="cuadro-de-texto">
+              <h2 class="texto">Contraseña</h2>
+              <input type="password" id="password" class="cuadro-de-texto">
+              <h2 id="olvidaste"><strong>¿Olvidaste tu contraseña?</strong></h2>
+            </form>
+            <p id="mensaje-error" class="texto"></p>
+            <div class="cuadro-boton flex">
+              <button type="button" id="ingresar" class="button-pass">INGRESA</button>
+              <h2>¿No tienes cuenta?<strong>REGISTRATE</strong></h2>
+            </div>
+          </div>
         </div>
-    </div>
-  </div>
-</section>
-     
+      </section>
 
-<div id="pantalla-bienvenida" class="bienvenida hide">
-    <section id="vista-dos" class="pantalla vista-dos flex">
-    <h1 class="titulo flex">INFORMACION SOBRE EL JUEGO</h1>
-    <div class="informacion flex">
-    <p class="mensaje-x">  League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con
-    un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego.</p>
-    
-    <iframe class="video" src="https://www.youtube.com/embed/KpxjwIaW0EM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe>
-    </div>
-</section>
-</div>
 
-  <div id="pantalla-campeones" class="pantalla-campeones hide ">
-  <div class="contenedor-campeones flex">
- <div class="filtrado-general">
- <select id="tipo" class="orden">
-  <option value="0">TIPO</option>
-  <option value="Assassin">Asesinos</option>
-  <option value="Fighter">Luchadores</option>
-  <option value="Mage">Magos</option>
-  <option value="Marksman">Tiradores</option>
-  <option value="Support">Apoyo</option>
-  <option value="Tank">Tanques</option>
- </select>
-<select class="orden" id="orden-ataque">
-  <option  value="0">PODER</option>         
-  <option value="0">Menor</option>
-  <option value="1">Mayor</option>
-</select>
-<select class="orden" id="az">
-  <option value="0">ORDEN</option>
-  <option value="0">A-Z</option>
-  <option value="1">Z-A</option>
-</select>
-</div>
+      <div id="pantalla-bienvenida" class="bienvenida hide">
+        <section id="vista-dos" class="pantalla-2 vista-dos flex">
+          <h1 class="titulo flex">INFORMACION SOBRE EL JUEGO</h1>
+          <div class="informacion flex">
+            <p class="mensaje-x"> League of Legends es un juego competitivo en línea de ritmo frenético, que
+              fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de
+              juegos de rol. Dos equipos de poderosos campeones, cada uno con
+              un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de
+              batalla y modos de juego.</p>
+            <iframe class="video" src="https://www.youtube.com/embed/KpxjwIaW0EM" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+        </section>
+      </div>
 
-<section id="vista3" class="campeones">
-  <p id="total" class="total"></p>
-  <p id="promedio"></p>
-<p id="contenido-personajes" class="padre"></p>
-</section>
-</div>
-</div>
+      <div id="pantalla-campeones" class="pantalla-campeones hide ">
+        <div class="contenedor-campeones flex">
+          <div class="filtrado-general flex">
+            <select id="tipo" class="orden">
+              <option value="0">TIPO</option>
+              <option value="Assassin">Asesinos</option>
+              <option value="Fighter">Luchadores</option>
+              <option value="Mage">Magos</option>
+              <option value="Marksman">Tiradores</option>
+              <option value="Support">Apoyo</option>
+              <option value="Tank">Tanques</option>
+            </select>
+            <select class="orden" id="orden-ataque">
+              <option value="0">PODER</option>
+              <option value="0">Menor</option>
+              <option value="1">Mayor</option>
+            </select>
+            <select class="orden" id="az">
+              <option value="0">ORDEN</option>
+              <option value="0">A-Z</option>
+              <option value="1">Z-A</option>
+            </select>
+          </div>
 
-<!--creo mi modal-->
-<div id="mi-modal" class="modal  hide">
-  <!--modal content-->
-  <div class="modal-content">
-  <span id="close" class="close">&times;</span>
-  <div id="info-de-lol" class="info"></div>
-  </div>
-  </div>
-</main>
-  
-  
-    <footer> ©2019 RiGa Games Inc.Todos los derechos reservados.RiGa Game,League of Legends es una marca registrada</footer>
+
+          <section id="vista3" class="campeones">
+            <p id="total" class="total"></p>
+            <p id="promedio" class="total"></p>
+            <p id="contenido-personajes" class="padre"></p>
+          </section>
+        </div>
+      </div>
+          <!--creo mi modal-->
+    <div id="mi-modal" class="modal  hide">
+        <!--modal content-->
+        <div class="modal-content">
+          <span id="close" class="close">&times;</span>
+          <div id="info-de-lol" class="info"></div>
+        </div>
+      </div>
+      </div>
+    </main>
+
+
+
+    <footer> ©2019 RiGa Games Inc.Todos los derechos reservados.RiGa Game,League of Legends es una marca registrada
+    </footer>
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-</body>
+  </body>
 
 </html>

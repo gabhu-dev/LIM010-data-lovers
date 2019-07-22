@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
 /*RECICLANDO */
 
 .hide {
@@ -12,11 +14,24 @@
 .flex {
     display: flex;
 }
+
 .pantalla {
-    height: 100vh;
+    height: 87vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.pantalla-2 {
+    height: 58vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    height: 90%;
+}
+
+
 /*--------------------------------------------------/
 /PANTALLA 1*/
 
@@ -27,35 +42,37 @@
 }
 
 .cuadro-login {
-    width: 460px;
-    height: 516px;
+    width: 90%;
+    height: 75%;
     background-color: #00000059;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 }
-.campeones{
+
+.campeones {
     text-align: center;
 }
+
 .logo {
     background-repeat: no-repeat;
     background-image: url(img/icono.png);
-    width: 49px;
-    height: 53px;
-    background-size: cover;
+    width: 15%;
+    height: 12%;
+    background-size: contain;
     margin-top: 30px;
 }
 
 .sub-cuadro-login {
-    width: 335px;
-    height: 210px;
+    width: 90%;
+    height: 50%;
     flex-direction: column;
 }
 
 .cuadro-de-texto {
-    width: 335px;
-    height: 45px;
-    padding: 14px;
+    width: 100%;
+    height: 20%;
+    padding: 5%;
     border-radius: 5px;
     border: none;
     outline: none;
@@ -63,15 +80,15 @@
 }
 
 .cuadro-boton {
-    height: 84px;
-    width: 335px;
+    height: 45%;
+    width: 90%;
     align-items: center;
     flex-direction: column;
 }
 
 .button-pass {
-    height: 45px;
-    width: 335px;
+    height: 30%;
+    width: 100%;
     outline: none;
     border: none;
     border-radius: 10px;
@@ -89,7 +106,6 @@
     font-weight: bold;
 }
 
-
 h1 {
     padding-top: 10px;
     color: #ddc68e;
@@ -99,15 +115,19 @@ h2 {
     color: #ddc68e;
     font-size: 20px;
 }
-#olvidaste{
+
+#olvidaste {
     text-align: end;
 }
+
+
 /*------------------------------------------------------/
 /PANTALLA 2*/
 
 .vista-dos {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-image: url(https://s-media-cache-ak0.pinimg.com/originals/d3/97/fa/d397faf0fec8ddd29c45bf847cbb7c41.gif);
 }
 
@@ -141,37 +161,29 @@ h2 {
 .informacion {
     width: 100%;
     height: 60%;
-justify-content: space-around;
-align-items:flex-end;
-   
-
-    /* padding: 20px;*/
-}
-
-.sub-informacion {
-    /* width: 40em; */
-    /* height: 11em; */
-    padding: 27px;
-    margin: 14px;
-    background-color: grey;
     flex-direction: column;
+    align-items: center;
 }
-.video{
-    height: 250px;
-    width: 435px;
+
+.video {
+    height: 60%;
+    width: 80%;
+    margin-top: 1%;
 }
-.mensaje-x{
+
+.mensaje-x {
     background-color: #2007078c;
     height: 250px;
-    width: 500px;
-    font-size: 20px;
+    width: 80%;
+    font-size: 74%;
     color: #F7F7F7;
     padding: 2%;
     font-family: 'Krub', sans-serif;
 }
+
 .menu {
     width: 100%;
-    height: 50px;
+    height: 3em;
     background-color: black;
     border-top: 1px solid #7d6033;
     border-bottom: 1px solid #7d6033;
@@ -183,6 +195,8 @@ align-items:flex-end;
     text-decoration: none;
     list-style: none;
 }
+
+
 /*--------------------------------------------------/
 /PANTALLA 3*/
 
@@ -197,30 +211,40 @@ align-items:flex-end;
     border: solid white;
     border-width: 0 0.1rem;
 }
+.total{
+    font-size: 1.5em;
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    color: #F7F7F7;
+}
+
 /* ESTILOS PARA IMAGENES*/
 
 .logo-lol {
     width: 100%;
     height: 120px;
     background-color: black;
-     align-self: center;
+    align-self: center;
     flex-direction: row;
-    
 }
+
 .titulo {
     color: #E3B656;
-    font-size: 40px;
-    padding: 30px;
-    margin-left: 250px;
+    font-size: 97%;
+    padding: 5%;
     font-family: 'EB Garamond', serif;
 }
 
-.img-header{
-    margin-left: 200px ;
-    width: 17%;
-    height: 118px;
-    margin-left: 349px;
+.img-header {
+    width: 36%;
+    height: 100%;
+    margin-left: 29%;
 }
+
+.img-dos {
+    display: none;
+}
+
 .img {
     width: 180px;
     height: 180px;
@@ -242,103 +266,38 @@ align-items:flex-end;
     background-color: #312b1fa8;
 }
 
-
-
-
 .orden {
     list-style: none;
     font-size: 1.5rem;
     text-align: center;
     padding: 0;
-    margin: 1rem ;
+    margin: 1rem;
     background-color: #e0dcdc99;
-   font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', sans-serif;
 }
 
 .orden:hover {
     border: solid white;
     border-width: 0 0.1rem;
-   
 }
-.filtrado-general{
-display: flex;
-flex-direction: row;
-height: max-content;
-width: max-content;
-align-self: center;
+
+.filtrado-general {
+    flex-direction: column;
+    align-self: center;
 }
+
 footer {
-    height: 40px;
+    height: -webkit-fill-available;
     background-color: black;
     border-top: 2px solid #7d6033;
     color: rgba(209, 197, 169, 0.4);
     text-align: center;
-    padding-top: 10px;
+    padding: 3%;
 }
 
-@media(max-width:375px) {
-    .login,
-    .vista-login,
-    .cuadro-login,
-    .bienvenida,
-    .pantalla
-    {
-        height: 670px;
-        width: 380px;
-    }
-    
-    .caja-login {
-        height: 210px;
-        width: 335px;
-    }
-    .cuadro-boton {
-        height: 84px;
-        width: 335px;
-    }
-    footer{
-        width:390px;
-        height: 80px
-    }
-    .nav, .logo-lol{
-        width: 400px;
-    }
-}
-@media(min-width:260px) and (max-width:411px){
-    .nav, .logo-lol{
-        width: 410px;
-    }
-    .pantalla{
-        height: 100%;
-        width: 100%;
-    }
-    .titulo{
-        font-size:30px;
-        margin-left: 0px
-    }
-    .img-header{
-      display: flex;
-      margin-left: 130px;
-      width: 150px
-    }
-    .gif{
-        display:none;
-    }
-    .informacion{
-        display:block;
-    }
-    footer{
-        width:410px;
-        height: 80px
-    }
-    .mensaje-x{
-        width:80%;
-        font-size:20px;
-        padding:15px;
-        
-    }
-}
 
 /*ESTILOS MODAL*/
+
 .modal {
     position: fixed;
     z-index: 1;
@@ -352,16 +311,15 @@ footer {
 }
 
 .info-descripcion {
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .contenido-modal {
     flex-direction: column;
 }
 
-.imgModal {
-    width: 20em;
-    height: 200px;
+.modal-img {
+    display: none;
 }
 
 .su-id {
@@ -370,25 +328,27 @@ footer {
 }
 
 .su-descripcion {
-    color: white;
-    font-size: 20px;
+    color: navajowhite;
+    font-size: 96%;
 }
 
 .su-titulo {
-    color: white;
-    font-size: 20px;
-    width: 152px;
+    color: peru;
+    font-size: x-large;
+    width: 100%;
 }
 
 .infor-macion {
     flex-direction: column;
-    height: 120px;
-    width: 50px;
+    align-items: center;
+    width: 100%;
+    margin-top: 6%;
 }
 
 .su-info {
     color: white;
     font-size: 15px;
+    color: tan;
 }
 
 .info {
@@ -397,22 +357,25 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
+
 /* Modal Content/Box */
 
 .modal-content {
     background-color: black;
     margin: auto;
-    padding: 0 0 0 20px;
+    padding: 10px 20px 0 20px;
     width: 70%;
-    height: 80%;
+    height: 100%;
     border-radius: 40px;
 }
+
+
 /* The Close Button */
 
 .close {
     color: #aaa;
-    float: right; 
-    margin-left: 31em;
+    float: right;
     font-size: 28px;
     font-weight: bold;
 }
@@ -422,4 +385,82 @@ footer {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+@media(min-width:600px) {
+    .pantalla,
+    .pantalla-2 {
+        height: 100vh;
+    }
+    .cuadro-login {
+        width: 30%;
+    }
+    .cuadro-de-texto {
+        height: 20%;
+    }
+    .cuadro-boton {
+        height: 20%;
+    }
+    .button-pass {
+        height: 57%;
+    }
+    .img-header {
+        width: 20%;
+    }
+    .img-dos {
+        display: inline-block;
+        width: 8%;
+        margin-left: 38%;
+    }
+    .titulo {
+        font-size: 3em;
+    }
+    .informacion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .mensaje-x {
+        height: 50%;
+        width: 33%;
+        font-size: 92%;
+    }
+    .video {
+        height: 58%;
+        width: 35%;
+        margin: 0;
+    }
+    .filtrado-general {
+        display: flex;
+        flex-direction: row;
+    }
+    .modal-content {
+        height: 84%;
+        width: 50%;
+    }
+    .info-descripcion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .contenido-modal {
+        width: 50%;
+    }
+    .modal-img {
+        display: block;
+        width: 87%;
+        margin: 2%;
+    }
+    .infor-macion {
+        width: 30%;
+        height: min-content;
+        margin-top: 22%;
+    }
+    .su-info {
+        font-size: 2em;
+    }
+    footer {
+        height: 25%;
+        padding: 10px;
+    }
 }
