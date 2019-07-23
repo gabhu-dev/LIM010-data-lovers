@@ -24,13 +24,14 @@ empezar.addEventListener('click', () => {
     const datos = contrasena.value;
     const datosUsuario = usuario.value;
     if (password < 2) {
-        if (datos === '' && datosUsuario === '') {
+        if (datos === 'LABORATORIA' && datosUsuario === 'LABORATORIA') {
             vistaLogin.classList.add('hide');
             vistaBienvenida.classList.remove('hide');
             cabecera.classList.remove('hide');
             barraNavegacion.classList.remove('hide');
         } else {
-            document.getElementById('mensaje-error').innerHTML = '*Datos Incorrectos*';
+            document.getElementById('mensaje-error').innerHTML =
+                '*Datos Incorrectos*';
             password++;
         }
     }
@@ -41,7 +42,7 @@ begin.addEventListener('click', () => {
     vistaBienvenida.classList.remove('hide');
 });
 // recorre la data
-const mostrarCampeones = (data) => {
+const mostrarCampeones = data => {
     let textC = '';
     for (let i = 0; i < data.length; i++) {
         const mostrar = `
@@ -64,15 +65,16 @@ campeones.addEventListener('click', () => {
 });
 // llama a los campeones por tipo,promedio,total
 tipo.addEventListener('change', () => {
-    const agarre = document.getElementById('tipo').value;
-    const promedio=document.getElementById('promedio');
+    const capturaSelect = document.getElementById('tipo').value;
     let vacio = '';
     let array1 = [];
-    array1 = mostrarAsesinos(arrayLOL, agarre);
+    array1 = mostrarAsesinos(arrayLOL, capturaSelect);
     vacio = mostrarCampeones(array1);
     document.getElementById('contenido-personajes').innerHTML = vacio;
-    document.getElementById('promedio').innerHTML = 'Promedio de campeones :' + ' ' + suma(array1);
-    document.getElementById('total').innerHTML = 'Total de campeones:' + ' ' + array1.length;
+    document.getElementById('promedio').innerHTML =
+        'Promedio de campeones :' + ' ' + suma(array1);
+    document.getElementById('total').innerHTML =
+        'Total de campeones:' + ' ' + array1.length;
 });
 // llama al orden alfabetico
 const az = document.getElementById('az');
@@ -80,11 +82,15 @@ az.addEventListener('change', () => {
     let capturarAlfa = document.getElementById('tipo').value;
     if (capturarAlfa === '0') {
         let array3 = sortAlfa(arrayLOL, az.value);
-        document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array3);
+        document.getElementById(
+            'contenido-personajes'
+        ).innerHTML = mostrarCampeones(array3);
     } else {
         const ar = mostrarAsesinos(arrayLOL, capturarAlfa);
         let array2 = sortAlfa(ar, az.value);
-        document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array2);
+        document.getElementById(
+            'contenido-personajes'
+        ).innerHTML = mostrarCampeones(array2);
     }
 });
 // llama por daño de ataque
@@ -93,17 +99,21 @@ orden.addEventListener('change', () => {
     let capturar = document.getElementById('tipo').value;
     if (capturar === '0') {
         let array3 = sortAtaque(arrayLOL, orden.value);
-        document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array3);
+        document.getElementById(
+            'contenido-personajes'
+        ).innerHTML = mostrarCampeones(array3);
     } else {
         const ar = mostrarAsesinos(arrayLOL, capturar);
         let array2 = sortAtaque(ar, orden.value);
-        document.getElementById('contenido-personajes').innerHTML = mostrarCampeones(array2);
+        document.getElementById(
+            'contenido-personajes'
+        ).innerHTML = mostrarCampeones(array2);
     }
 });
 // llama a mi modal
 descripcion.addEventListener('click', () => {
     const campeon = event.target.parentElement.id;
-    const idCampeones = arrayLOL.map(x => x.id).indexOf(campeon);
+    const idCampeones = arrayLOL.map(personajes => personajes.id).indexOf(campeon);
     if (event.target.parentElement.getAttribute('name') === 'jalar') {
         // mostramos modal
         document.getElementById('mi-modal').classList.remove('hide');

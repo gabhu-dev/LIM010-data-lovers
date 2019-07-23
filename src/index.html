@@ -11,8 +11,9 @@
 </head>
 
 <body>
-    <header class="logo-lol hide" id="cabecera"> <img class="img-header" src="img/logo-fondo.png" alt="Imagen-lol"> <img class="img-dos" src="img/Gif.gif" alt="gif-lol"> </header>
-    <nav class=" nav hide" id="nav">
+    <header class="logo-lol hide" id="cabecera"> <img class="img-header" src="img/logo-fondo.png" alt="Imagen-lol">
+        <img class="img-dos" src="img/Gif.gif" alt="gif-lol"> </header>
+    <nav class="hide" id="nav">
         <ul class="menu flex">
             <li id="inicio"><a href="#" class="btn-opciones">INICIO</a></li>
             <li id="campeones"><a href="#" class="btn-opciones">CAMPEONES</a></li>
@@ -48,7 +49,6 @@
                 <div class="informacion flex">
                     <p class="mensaje-x"> League of Legends es un juego competitivo en línea de ritmo frenético, que fusiona la velocidad y la intensidad de la estrategia en tiempo real (ETR) con elementos de juegos de rol. Dos equipos de poderosos campeones, cada uno con
                         un diseño y estilo de juegos únicos, compiten cara a cara a través de diversos campos de batalla y modos de juego.</p>
-
                     <iframe class="video" src="https://www.youtube.com/embed/KpxjwIaW0EM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
                 </div>
             </section>
@@ -58,63 +58,49 @@
             <div class="contenedor-campeones flex">
                 <div class="filtrado-general flex">
                     <select id="tipo" class="orden">
-  <option value="0">TIPO</option>
-  <option value="Assassin">Asesinos</option>
-  <option value="Fighter">Luchadores</option>
-  <option value="Mage">Magos</option>
-  <option value="Marksman">Tiradores</option>
-  <option value="Support">Apoyo</option>
-  <option value="Tank">Tanques</option>
- </select>
+              <option value="0">TIPO</option>
+              <option value="Assassin">Asesinos</option>
+              <option value="Fighter">Luchadores</option>
+              <option value="Mage">Magos</option>
+              <option value="Marksman">Tiradores</option>
+              <option value="Support">Apoyo</option>
+              <option value="Tank">Tanques</option>
+            </select>
                     <select class="orden" id="orden-ataque">
-  <option  value="0">PODER</option>         
-  <option value="0">Menor</option>
-  <option value="1">Mayor</option>
-</select>
+              <option value="0">PODER</option>
+              <option value="0">Menor</option>
+              <option value="1">Mayor</option>
+            </select>
                     <select class="orden" id="az">
-  <option value="0">ORDEN</option>
-  <option value="0">A-Z</option>
-  <option value="1">Z-A</option>
-</select>
-               </div>
+              <option value="0">ORDEN</option>
+              <option value="0">A-Z</option>
+              <option value="1">Z-A</option>
+            </select>
+                </div>
+
 
                 <section id="vista3" class="campeones">
                     <p id="total" class="total"></p>
-                    <p id="promedio"></p>
+                    <p id="promedio" class="total"></p>
                     <p id="contenido-personajes" class="padre"></p>
                 </section>
             </div>
         </div>
-    </main>
-    <!--creo mi modal-->
-    <div id="mi-modal" class="modal  hide">
-        <!--modal content-->
-        <div class="modal-content">
-            <span id="close" class="close">&times;</span>
-            <div id="info-de-lol" class="info"></div>
+        <!--creo mi modal-->
+        <div id="mi-modal" class="modal  hide">
+            <!--modal content-->
+            <div class="modal-content">
+                <span id="close" class="close">&times;</span>
+                <div id="info-de-lol" class="info"></div>
+            </div>
         </div>
-    </div>
-
-    <section id="vista3" class="campeones">
-        <p id="total" class="total"></p>
-        <p id="promedio"></p>
-        <p id="contenido-personajes" class="padre"></p>
-    </section>
-
-    </div>
-
-    <!--creo mi modal-->
-    <div id="mi-modal" class="modal  hide">
-        <!--modal content-->
-        <div class="modal-content">
-            <span id="close" class="close">&times;</span>
-            <div id="info-de-lol" class="info"></div>
         </div>
-    </div>
     </main>
 
 
-    <footer> ©2019 RiGa Games Inc.Todos los derechos reservados.RiGa Game,League of Legends es una marca registrada</footer>
+
+    <footer> ©2019 RiGa Games Inc.Todos los derechos reservados.RiGa Game,League of Legends es una marca registrada
+    </footer>
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>

@@ -5,7 +5,9 @@
 
 // la condicion es el tipo que selecciona el usuario
 const mostrarAsesinos = (data, condition) => {
-    const mostrar = data.filter(caracter => (caracter.tags[0] === condition || caracter.tags[1] === condition));
+    const mostrar = data.filter(
+        caracter => caracter.tags[0] === condition || caracter.tags[1] === condition
+    );
     return mostrar;
 };
 
@@ -19,9 +21,11 @@ const sortAlfa = (data, condition) => {
         return mostrarA.reverse();
     }
 };
-//Ordenando segun daño de ataque
+// Ordenando segun daño de ataque
 const sortAtaque = (data, condition) => {
-    const mostrarB = data.sort((ab, cd) => (ab.stats.attackdamage > cd.stats.attackdamage ? 1 : -1));
+    const mostrarB = data.sort((ab, cd) =>
+        ab.stats.attackdamage > cd.stats.attackdamage ? 1 : -1
+    );
 
     if (condition === '0') {
         return mostrarB;
@@ -42,6 +46,3 @@ window.suma = suma;
 window.mostrarAsesinos = mostrarAsesinos;
 window.sortAtaque = sortAtaque;
 window.sortAlfa = sortAlfa;
-
-
-

@@ -211,7 +211,12 @@ h2 {
     border: solid white;
     border-width: 0 0.1rem;
 }
-
+.total{
+    font-size: 1.5em;
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    color: #F7F7F7;
+}
 
 /* ESTILOS PARA IMAGENES*/
 
