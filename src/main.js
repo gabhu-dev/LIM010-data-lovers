@@ -65,6 +65,7 @@ campeones.addEventListener('click', () => {
 // llama a los campeones por tipo,promedio,total
 tipo.addEventListener('change', () => {
     const agarre = document.getElementById('tipo').value;
+    const promedio=document.getElementById('promedio');
     let vacio = '';
     let array1 = [];
     array1 = mostrarAsesinos(arrayLOL, agarre);

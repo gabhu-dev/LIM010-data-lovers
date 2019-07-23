@@ -42,3 +42,6 @@ window.suma = suma;
 window.mostrarAsesinos = mostrarAsesinos;
 window.sortAtaque = sortAtaque;
 window.sortAlfa = sortAlfa;
+
+
+
