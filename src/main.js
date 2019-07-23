@@ -120,7 +120,6 @@ descripcion.addEventListener('click', () => {
       <p class="su-info"> Defensa:${arrayLOL[idCampeones].info.defense}</p>
       <p class="su-info"> Magia:${arrayLOL[idCampeones].info.magic}</p>
       <p class="su-info"> Dificultad:${arrayLOL[idCampeones].info.difficulty}</p>
-    
       <div>
       </div>`;
     }
