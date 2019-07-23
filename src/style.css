@@ -382,6 +382,9 @@ footer {
     cursor: pointer;
 }
 
+
+/*RESPONSIVE*/
+
 @media(min-width:600px) {
     .pantalla,
     .pantalla-2 {

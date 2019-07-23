@@ -36,7 +36,6 @@ const suma = (data) => {
     });
     const suma = extrayendo.reduce((previous, current) => current += previous);
     const promedio = Math.round(suma / extrayendo.length);
-
     return promedio;
 };
 window.suma = suma;
