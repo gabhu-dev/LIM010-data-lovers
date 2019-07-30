@@ -21,6 +21,7 @@ const sortAlfa = (data, condition) => {
     return mostrarA.reverse();
   }
 };
+
 // Ordenando segun daño de ataque
 const sortAtaque = (data, condition) => {
   const mostrarB = data.sort((ab, cd) =>
@@ -33,6 +34,7 @@ const sortAtaque = (data, condition) => {
     return mostrarB.reverse();
   }
 };
+
 // suma y obtiene el promedio por medio de ataque
 const suma = (data) => {
   const extrayendo = data.map(tipo => {
@@ -42,6 +44,7 @@ const suma = (data) => {
   const promedio = Math.round(suma / extrayendo.length);
   return promedio;
 };
+
 window.suma = suma;
 window.mostrarAsesinos = mostrarAsesinos;
 window.sortAtaque = sortAtaque;
