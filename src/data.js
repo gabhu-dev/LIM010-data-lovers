@@ -37,10 +37,10 @@ const sortAtaque = (data, condition) => {
 
 // suma y obtiene el promedio por medio de ataque
 const suma = (data) => {
-  const extrayendo = data.map(tipo => {
-    return tipo.stats.attackdamage;
+  const extrayendo = data.map(val => {
+    return val.stats.attackdamage;
   });
-  const suma = extrayendo.reduce((previous, current) => current += previous);
+  const suma = extrayendo.reduce((acc, val) => acc + val);
   const promedio = Math.round(suma / extrayendo.length);
   return promedio;
 };

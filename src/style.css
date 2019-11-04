@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'EB Garamond', serif;
 }
 
 
@@ -15,12 +17,6 @@
     display: flex;
 }
 
-.pantalla {
-    height: 87vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .pantalla-2 {
     height: 58vh;
     background-size: cover;
@@ -31,17 +27,25 @@ main {
     height: 90%;
 }
 
-
+.shadow {
+    box-shadow: 2px 2px 10px #666;
+}
+.main-color{
+    color: #E3B656;
+}
 /*--------------------------------------------------/
 /PANTALLA 1*/
 
-.vista-login {
+.pantalla-login {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
     background-image: url(img/Lol.jpg);
 }
 
-.cuadro-login {
+.contenedor-cuadro-login {
     width: 90%;
     height: 75%;
     background-color: #00000059;
@@ -63,48 +67,37 @@ main {
     margin-top: 30px;
 }
 
-.sub-cuadro-login {
+.form-login {
     width: 90%;
     height: 50%;
     flex-direction: column;
 }
-
-.cuadro-de-texto {
+.contenedor-input{
     width: 100%;
     height: 20%;
+}
+.cuadro-de-texto {
+    width: 100%;
     padding: 5%;
     border-radius: 5px;
     border: none;
     outline: none;
-    font-size: 30px;
+    font-size: 1em;
 }
 
-.cuadro-boton {
-    height: 45%;
-    width: 90%;
-    align-items: center;
-    flex-direction: column;
-}
 
 .button-pass {
-    height: 30%;
-    width: 100%;
+    width: 88%;
     outline: none;
     border: none;
     border-radius: 10px;
     background-color: black;
     color: white;
-    font-family: 'Cuprum', sans-serif;
     font-size: 25px;
+    padding: 7px;
 }
 
-.texto {
-    font-size: 19px;
-    color: white;
-    margin-top: 14px;
-    font-family: 'Cuprum', sans-serif;
-    font-weight: bold;
-}
+
 
 h1 {
     padding-top: 10px;
@@ -116,10 +109,54 @@ h2 {
     font-size: 20px;
 }
 
-#olvidaste {
-    text-align: end;
+h3 {
+    color: #E3B656;
 }
+h4 {
+    color: white;
+    font-weight: normal;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 
+  .texto{
+      font-size:1em;
+      color: #E3B656;
+      padding: 5px;
+  }
 
 /*------------------------------------------------------/
 /PANTALLA 2*/
@@ -135,13 +172,12 @@ h2 {
     flex-direction: column;
     background-attachment: fixed;
     z-index: 1;
-    background-image: url(img/fondo1.jpg);
+    background-image: url(img/fondo4.jpg);
 }
 
 .btn-opciones {
     color: #E3B656;
     border: none;
-    font-family: 'EB Garamond', serif;
     font-weight: bold;
     text-decoration: none;
 }
@@ -178,7 +214,6 @@ h2 {
     font-size: 74%;
     color: #F7F7F7;
     padding: 2%;
-    font-family: 'Krub', sans-serif;
 }
 
 .menu {
@@ -211,12 +246,13 @@ h2 {
     border: solid white;
     border-width: 0 0.1rem;
 }
-.total{
+
+.total {
     font-size: 1.5em;
-    font-family: 'EB Garamond', serif;
     font-weight: bold;
     color: #F7F7F7;
 }
+
 
 /* ESTILOS PARA IMAGENES*/
 
@@ -232,7 +268,6 @@ h2 {
     color: #E3B656;
     font-size: 97%;
     padding: 5%;
-    font-family: 'EB Garamond', serif;
 }
 
 .img-header {
@@ -241,29 +276,32 @@ h2 {
     margin-left: 29%;
 }
 
-.img-dos {
-    display: none;
-}
 
 .img {
     width: 180px;
     height: 180px;
     object-fit: cover;
+    
 }
-
-.img:hover {
-    width: 185px;
-    height: 185px;
+.personajes-flex:hover {
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+    border: 1px solid #E3B656;
 }
+/* .personajes-flex:hover {
+    width: 210px;
+    height: 260px;
+} */
 
 .personajes-flex {
+    overflow:hidden;
     display: inline-block;
     width: 199px;
     height: 250px;
     padding: 5px;
     margin: 2%;
     vertical-align: top;
-    background-color: #312b1fa8;
+    background-color: #0e0e0e;
 }
 
 .orden {
@@ -273,7 +311,6 @@ h2 {
     padding: 0;
     margin: 1rem;
     background-color: #e0dcdc99;
-    font-family: 'Cuprum', sans-serif;
 }
 
 .orden:hover {
@@ -307,46 +344,48 @@ footer {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(36, 39, 24, 0.6);
+    background-color: rgba(27, 28, 29, 0.6);
 }
 
-.info-descripcion {
-    flex-direction: column;
-}
 
 .contenido-modal {
     flex-direction: column;
+   
 }
-
+.contenido-descripcion{
+     /* height: 5em; */
+     width: 100%;   
+}
 .modal-img {
     display: none;
 }
 
-.su-id {
-    color: orange;
-    font-size: 60px;
+.nombre{
+    font-size: 30px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #E3B656;
 }
 
 .su-descripcion {
-    color: navajowhite;
-    font-size: 96%;
+    color: #c4b998;
 }
 
 .su-titulo {
-    color: peru;
-    font-size: x-large;
-    width: 100%;
+    font-weight: 700;
+    font-size: 12px;
+    color: #c4b998;
+    letter-spacing: 4px;
+    padding: 16px 0 16px 4px;
+    text-transform: uppercase;
 }
 
-.infor-macion {
+.habilidades {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 6%;
 }
 
 .su-info {
-    color: white;
     font-size: 15px;
     color: tan;
 }
@@ -362,12 +401,13 @@ footer {
 /* Modal Content/Box */
 
 .modal-content {
-    background-color: black;
+    background-color:#0e0e0e;
     margin: auto;
     padding: 10px 20px 0 20px;
     width: 70%;
     height: 100%;
     border-radius: 40px;
+
 }
 
 
@@ -389,26 +429,27 @@ footer {
 
 
 /*RESPONSIVE*/
-
+/* hasta que el minimo de pantalla sea de 600px*/
 @media(min-width:600px) {
-    .pantalla,
+    .pantalla-login,
     .pantalla-2 {
         height: 100vh;
-    }
-    .cuadro-login {
+    } 
+    .contenedor-cuadro-login {
         width: 30%;
     }
+
+   
     .cuadro-de-texto {
-        height: 20%;
+        height: 100%;
     }
-    .cuadro-boton {
-        height: 20%;
-    }
-    .button-pass {
-        height: 57%;
-    }
+  
+    /* .button-pass {
+        height: 27%;
+    } */
     .img-header {
         width: 20%;
+        margin-left: 35%;
     }
     .img-dos {
         display: inline-block;
@@ -439,16 +480,16 @@ footer {
     }
     .modal-content {
         height: 84%;
-        width: 50%;
+        width: 56%;
     }
-    .info-descripcion {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
+
     .contenido-modal {
-        width: 50%;
+        width: 100%;
+        flex-direction: row;
     }
+   .nombre{
+       font-size: 60px;
+   }
     .modal-img {
         display: block;
         width: 87%;
@@ -460,7 +501,8 @@ footer {
         margin-top: 22%;
     }
     .su-info {
-        font-size: 2em;
+        font-size: 1em;
+        padding: 5px;
     }
     footer {
         height: 25%;

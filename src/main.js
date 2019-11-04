@@ -7,7 +7,7 @@ const campeones = document.getElementById('campeones');
 const begin = document.getElementById('inicio');
 const descripcion = document.getElementById('contenido-personajes');
 // VISTAS
-const vistaLogin = document.getElementById('pantalla-login');
+const vistaLogin = document.getElementById('contenedor-pantalla-login');
 const vistaBienvenida = document.getElementById('pantalla-bienvenida');
 const vistaCampeones = document.getElementById('pantalla-campeones');
 
@@ -61,7 +61,7 @@ const mostrarCampeones = data => {
   let textC = '';
   for (let i = 0; i < data.length; i++) {
     const mostrar = `
-    <div class="personajes-flex" name="jalar" id="${data[i].id}">
+    <div class="personajes-flex shadow" name="jalar" id="${data[i].id}">
         <img class="img" src='${data[i].splash}'/>
         <p class="decorado">${data[i].name}</p>
       </div>`;
@@ -150,19 +150,20 @@ llamadaModal = (dataLol) => {
       document.getElementById('mi-modal').classList.remove('hide');
       // insertamos caracteristicas en el modal
       document.getElementById('info-de-lol').innerHTML = `
-     <div class="info-descripcion flex">
-     <div class="contenido-modal flex">
-     <p class="su-id">${dataLol[idCampeones].id}</p>
+     
+     <p class="nombre main-color">${dataLol[idCampeones].id}</p> 
      <p class="su-titulo">${dataLol[idCampeones].title}</p>
-     <img  class = "modal-img"src="${dataLol[idCampeones].splash}"/> 
-     <p class="su-descripcion">${dataLol[idCampeones].blurb}</p>
-     </div>
-     <div class="infor-macion flex">
-      <p class="su-info"> Ataque:${dataLol[idCampeones].info.attack}</p>
-      <p class="su-info"> Defensa:${dataLol[idCampeones].info.defense}</p>
-      <p class="su-info"> Magia:${dataLol[idCampeones].info.magic}</p>
-      <p class="su-info"> Dificultad:${dataLol[idCampeones].info.difficulty}</p>
-      </div>`;
+    <div class="contenido-modal flex">
+     <div class="contenido-descripcion flex">
+     
+        <p class="su-descripcion">${dataLol[idCampeones].blurb}</p>
+      </div>
+     <div class="habilidades flex">
+     <i class="fas fa-hand-rock main-color"></i> <p class="su-info"> Ataque: ${dataLol[idCampeones].info.attack}</p>
+      <i class="fas fa-meteor main-color"></i> <p class="su-info">Defensa: ${dataLol[idCampeones].info.defense}</p>
+      <i class="fas fa-magic main-color"></i> <p class="su-info"> Magia: ${dataLol[idCampeones].info.magic}</p>
+      <i class="fas fa-shield-alt main-color"></i> <p class="su-info"> Dificultad: ${dataLol[idCampeones].info.difficulty}</p>
+    </div>`;
     }
   });
 };

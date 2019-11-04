@@ -2,45 +2,50 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>WikiLOL</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Cuprum|EB+Garamond|Krub|Literata&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/icono.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>WikiLOL</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link href="https://fonts.googleapis.com/css?family=Cuprum|EB+Garamond|Krub|Literata&display=swap" rel="stylesheet"> -->
+  <link rel="icon" href="img/icono.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <header class="logo-lol hide" id="cabecera"> <img class="img-header" src="img/logo-fondo.png" alt="Imagen-lol">
-        <img class="img-dos" src="img/Gif.gif" alt="gif-lol"> </header>
+  <header class="logo-lol hide" id="cabecera">
+   <img class="img-header" src="img/logo-fondo.png" alt="Logo de League of Legends">
+  </header>
     <nav class="hide" id="nav">
-        <ul class="menu flex">
-            <li id="inicio"><a href="#" class="btn-opciones">INICIO</a></li>
-            <li id="campeones"><a href="#" class="btn-opciones">CAMPEONES</a></li>
-            <li><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/regions/">REGIONES</a></li>
-            <li><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/comic/">COMICS</a></li>
-        </ul>
+      <ul class="menu flex">
+        <li id="inicio"><a href="#" class="btn-opciones">INICIO</a></li>
+        <li id="campeones"><a href="#" class="btn-opciones">CAMPEONES</a></li>
+        <li><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/regions/">REGIONES</a></li>
+        <li><a class="btn-opciones" href="https://universe.leagueoflegends.com/es_MX/comic/">COMICS</a></li>
+      </ul>
     </nav>
     <main>
-        <section id="pantalla-login" class="login">
-            <div class="pantalla vista-login flex">
-                <div class="cuadro-login flex">
-                    <header class="logo"></header>
-                    <form class="sub-cuadro-login">
-                        <h2 class="texto">Usuario</h2>
-                        <input type="text" id="usuario" class="cuadro-de-texto">
-                        <h2 class="texto">Contraseña</h2>
-                        <input type="password" id="password" class="cuadro-de-texto">
-                        <h2 id="olvidaste"><strong>¿Olvidaste tu contraseña?</strong></h2>
-                    </form>
-                    <p id="mensaje-error" class="texto"></p>
-                    <div class="cuadro-boton flex">
-                        <button type="button" id="ingresar" class="button-pass">INGRESA</button>
-                        <h2>¿No tienes cuenta?<strong>REGISTRATE</strong></h2>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section id="contenedor-pantalla-login" class="">
+        <div class="pantalla-login flex">
+          <div class="contenedor-cuadro-login flex">
+            <header class="logo">
+            </header>
+            <h3>Liga de leyendas</h3>
+            <form class="form-login">
+              <h4 class="">Usuario</h4>
+              <div class="tooltip contenedor-input">
+                <input type="text" id="usuario" class="cuadro-de-texto ">
+                <span class="tooltiptext">Usuario: LABORATORIA</span>
+              </div>
+              <h4 class="">Contraseña</h4>
+              <div class="tooltip contenedor-input">
+                <input type="password" id="password" class="cuadro-de-texto">
+                <span class="tooltiptext">Contraseña: LABORATORIA</span>
+              </div>
+            </form>
+           <button type="button" id="ingresar" class="button-pass">INGRESA</button>
+           <p id="mensaje-error" class="texto"></p>
+          </div>
+        </div>
+      </section>
 
 
         <div id="pantalla-bienvenida" class="bienvenida hide">
@@ -104,6 +109,7 @@
     <script src="./data/lol/lol.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
+    <script  src = " https://kit.fontawesome.com/f326a358b3.js " > </script>
 </body>
 
 </html>
